@@ -1,0 +1,16 @@
+<script setup lang="ts">
+// Platzhalter-Logo in den Vereinsfarben blau-gelb.
+// TODO: durch das echte Vereinslogo ersetzen (z. B. /public/logo.svg).
+</script>
+
+<template>
+  <svg viewBox="0 0 48 48" class="shrink-0" aria-hidden="true">
+    <circle cx="24" cy="24" r="23" fill="#0b4f9e" />
+    <circle cx="24" cy="24" r="23" fill="none" stroke="#ffd11a" stroke-width="2" />
+    <!-- stilisierte Laufende Figur -->
+    <path
+      d="M27 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm-9.5 6.5 6-2.2c1-.4 2.2 0 2.8.9l2 3 3.2.6-.5 2.8-4.4-.8-1.7-2.5-1.8 3.9 3.4 3.2 1.6 6.3-2.9.7L18 33l-3.6-3.5 4.4-6.6-3.6 1.3-1.6 3.6-2.6-1.1 2-4.6c.2-.6.7-1 1.3-1.2Z"
+      fill="#ffd11a"
+    />
+  </svg>
+</template>

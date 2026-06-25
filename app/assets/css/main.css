@@ -1,0 +1,51 @@
+@import 'tailwindcss';
+
+/*
+  Vereinsfarben blau-gelb als Design-Tokens.
+  Anpassbar an dein bestehendes Logo / CI.
+*/
+@theme {
+  --color-blau-50: #eef5ff;
+  --color-blau-100: #d9e8ff;
+  --color-blau-200: #bcd6ff;
+  --color-blau-300: #8ebcff;
+  --color-blau-400: #5996fc;
+  --color-blau-500: #3372f3;
+  --color-blau-600: #1d52e0;
+  --color-blau-700: #1740b6;
+  --color-blau-800: #163a90;
+  --color-blau-900: #0b4f9e; /* Primär-Vereinsblau */
+  --color-blau-950: #0a2356;
+
+  --color-gelb-50: #fffde7;
+  --color-gelb-100: #fff9c2;
+  --color-gelb-200: #fff088;
+  --color-gelb-300: #ffe14d;
+  --color-gelb-400: #ffd11a; /* Akzent-Gelb */
+  --color-gelb-500: #f5b800;
+  --color-gelb-600: #d49000;
+  --color-gelb-700: #a96704;
+  --color-gelb-800: #8b500c;
+  --color-gelb-900: #76420f;
+
+  --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI',
+    Roboto, Helvetica, Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-white text-slate-800 antialiased;
+}
+
+/* Dezentes Hintergrundmuster für Hero-Bereiche */
+.bg-grid {
+  background-image: radial-gradient(
+    circle at 1px 1px,
+    rgb(255 255 255 / 0.12) 1px,
+    transparent 0
+  );
+  background-size: 28px 28px;
+}
