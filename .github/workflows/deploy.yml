@@ -1,0 +1,65 @@
+name: Deploy to GitHub Pages
+
+on:
+  # Bei jedem Push auf main automatisch deployen
+  push:
+    branches: [main]
+  # Manuelles Auslösen über den Actions-Tab
+  workflow_dispatch:
+
+# Rechte, die der GITHUB_TOKEN für das Pages-Deployment braucht
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Es soll immer nur ein Deployment gleichzeitig laufen
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v5
+        # Aktiviert GitHub Pages automatisch (falls noch nicht passiert)
+        with:
+          enablement: true
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Generate static site
+        run: npm run generate
+        env:
+          # base_path kommt von actions/configure-pages und endet ohne "/".
+          # Nuxt braucht den Pfad mit abschließendem "/".
+          NUXT_APP_BASE_URL: ${{ steps.pages.outputs.base_path }}/
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .output/public
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,5 +1,10 @@
 import tailwindcss from '@tailwindcss/vite'
 
+// Auf GitHub Pages liegt die Seite unter https://<user>.github.io/<repo>/,
+// also unter einem Unterpfad. Der Workflow setzt dafür NUXT_APP_BASE_URL
+// (z. B. "/asv-blaugelb/"). Lokal bleibt es bei "/".
+const baseURL = process.env.NUXT_APP_BASE_URL || '/'
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2025-01-01',
@@ -9,7 +14,8 @@ export default defineNuxtConfig({
   // in .output/public/ – ohne Server, ohne Datenbank, ohne Login.
   ssr: true,
   nitro: {
-    preset: 'static',
+    // github_pages-Preset: legt automatisch .nojekyll an und eine 404.html.
+    preset: 'github_pages',
     prerender: {
       crawlLinks: true,
       routes: ['/'],
@@ -23,6 +29,7 @@ export default defineNuxtConfig({
   },
 
   app: {
+    baseURL,
     head: {
       htmlAttrs: { lang: 'de' },
       title: 'ASV blaugelb Offenhausen',
@@ -36,7 +43,8 @@ export default defineNuxtConfig({
         },
         { name: 'theme-color', content: '#0b4f9e' },
       ],
-      link: [{ rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
+      // Favicon-Link wird in app.vue gesetzt, damit der baseURL-Unterpfad
+      // (GitHub Pages) korrekt berücksichtigt wird.
     },
   },
 })
