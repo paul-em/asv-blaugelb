@@ -24,8 +24,9 @@ muss. Belegte Daten stehen in [vereinsdaten.md](vereinsdaten.md),
       und Orten – Quelle siehe [angebot.md](angebot.md).
 - [x] **Mitgliedsbeiträge**: 25 € Einzelmitglied, 20 € je weiteres
       Familienmitglied im Haushalt, Kinder bis 15 Jahre frei.
-- [x] **Bankverbindungen** für den Mitgliedsbeitrag stehen auf
-      `/mitgliedschaft`.
+- [x] **Bankverbindung** für den Mitgliedsbeitrag steht auf `/mitgliedschaft`
+      (Sparkasse Lambach). Das Konto bei der Raiffeisenbank Eberschwang wird
+      aufgelöst und ist seit 10.08.2026 nicht mehr angeführt.
 - [x] **WhatsApp-Kontakt**: `https://wa.me/436502114679` – die Nachrichten
       gehen an Obmann Martin Muckenhuber (bestätigt 10.08.2026). Die Nummer ist
       im Link sichtbar; sie steht bewusst nur als WhatsApp-Kontakt auf der

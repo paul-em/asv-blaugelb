@@ -111,7 +111,7 @@ Eine gesonderte **Beitrittsgebühr** wird derzeit nicht eingehoben bzw. ist nich
 beziffert; außerordentliche Mitglieder (Förderer) zahlen laut Statuten einen
 erhöhten Beitrag nach Vereinbarung.
 
-## Bankverbindungen
+## Bankverbindung
 
 Für Mitgliedsbeiträge, bestätigt in der Projektspezifikation vom 09.08.2026 und
 dort ausdrücklich für die Website freigegeben:
@@ -119,7 +119,9 @@ dort ausdrücklich für die Website freigegeben:
 | Bank | IBAN |
 | --- | --- |
 | Sparkasse Lambach | AT95 2031 7077 0108 4571 |
-| Raiffeisenbank Eberschwang | AT70 3408 1000 0005 1565 |
+
+Das zweite Konto bei der **Raiffeisenbank Eberschwang** wird aufgelöst und
+wurde am 10.08.2026 auf Vereinsangabe hin von der Website entfernt.
 
 Der BIC wird bewusst weggelassen – innerhalb des SEPA-Raums genügt die IBAN.
 Verwendungszweck laut Website: „Mitgliedsbeitrag + Vor- und Nachname".

@@ -161,8 +161,7 @@ const steps = computed(() =>
       Bankverbindung für den Mitgliedsbeitrag
     </h2>
     <p class="mt-3 text-slate-600">
-      Den Mitgliedsbeitrag bitte auf eines der folgenden Vereinskonten
-      überweisen:
+      Den Mitgliedsbeitrag bitte auf das folgende Vereinskonto überweisen:
     </p>
     <div class="mt-6 grid gap-4 sm:grid-cols-2">
       <div

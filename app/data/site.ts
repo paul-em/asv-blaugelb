@@ -345,13 +345,15 @@ export const feeNote =
   'Die Beträge gelten pro Vereinsjahr und werden nach dem Beitritt fällig. Außerordentliche Mitglieder (Förderer) unterstützen den Verein mit einem höheren Beitrag nach Vereinbarung.'
 
 /*
-  Bankverbindungen für den Mitgliedsbeitrag.
+  Bankverbindung für den Mitgliedsbeitrag.
   BIC ist bewusst nicht angeführt – für Überweisungen innerhalb des SEPA-Raums
   genügt die IBAN.
+
+  Das zweite Konto (Raiffeisenbank Eberschwang) wird aufgelöst und ist deshalb
+  nicht mehr auf der Seite angeführt.
 */
 export const bankAccounts = [
   { bank: 'Sparkasse Lambach', iban: 'AT95 2031 7077 0108 4571' },
-  { bank: 'Raiffeisenbank Eberschwang', iban: 'AT70 3408 1000 0005 1565' },
 ]
 
 export const paymentReference = 'Mitgliedsbeitrag + Vor- und Nachname'

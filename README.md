@@ -54,7 +54,7 @@ public/                 # favicon, robots.txt (statische Assets)
 | `/` | Begrüßung, Angebot nach Saison, Einladung an neue Mitglieder, Rückblick 2013–2017 |
 | `/verein` | Wer wir sind, Vereinszweck, Sportarten, Vorstand |
 | `/angebot` | Saisonprogramm im Detail inkl. Freibad-Regeln |
-| `/mitgliedschaft` | Beitrag, Ablauf des Beitritts, Bankverbindungen |
+| `/mitgliedschaft` | Beitrag, Ablauf des Beitritts, Bankverbindung |
 | `/kontakt` | E-Mail, WhatsApp, Vereinssitz, Trainingszeiten im Überblick |
 | `/impressum` | Offenlegung nach § 5 ECG und §§ 24, 25 MedienG |
 | `/datenschutz` | Datenschutzerklärung (DSGVO/DSG) |
@@ -63,7 +63,7 @@ public/                 # favicon, robots.txt (statische Assets)
 
 | Datei | Inhalt |
 | --- | --- |
-| [`docs/vereinsdaten.md`](docs/vereinsdaten.md) | Stammdaten, ZVR, Vorstand, Beiträge, Bankverbindungen, Statuten (Fassung 2017) |
+| [`docs/vereinsdaten.md`](docs/vereinsdaten.md) | Stammdaten, ZVR, Vorstand, Beiträge, Bankverbindung, Statuten (Fassung 2017) |
 | [`docs/angebot.md`](docs/angebot.md) | Saisonprogramm, Quelle der Trainingszeiten |
 | [`docs/freibad.md`](docs/freibad.md) | Freibad-Kooperation mit der Marktgemeinde |
 | [`docs/historie.md`](docs/historie.md) | Veranstaltungen 2013–2017, Inhalte der alten Website |
