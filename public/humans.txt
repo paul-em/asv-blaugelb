@@ -1,0 +1,10 @@
+/* TEAM */
+	Verein: ASV blaugelb Offenhausen (Ausdauersportverein)
+	Ort: 4625 Offenhausen, Oberösterreich, Österreich
+	Website: https://blaugelb.offenhausen.at
+
+/* SITE */
+	Sprache: Deutsch
+	Standards: HTML5, CSS3
+	Komponenten: Nuxt 4, Vue 3, Tailwind CSS v4
+	Hosting: Statische Seite (Static-Site-Generation)
