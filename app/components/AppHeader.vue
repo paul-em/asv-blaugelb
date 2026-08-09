@@ -19,7 +19,7 @@ watch(
   >
     <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
       <NuxtLink to="/" class="flex items-center gap-3">
-        <LogoMark class="h-10 w-10" />
+        <LogoMark compact class="h-10 w-10" />
         <span class="leading-tight">
           <span class="block font-extrabold tracking-tight text-blau-900">{{
             club.shortName

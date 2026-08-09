@@ -32,14 +32,14 @@ export default defineNuxtConfig({
     baseURL,
     head: {
       htmlAttrs: { lang: 'de' },
-      title: 'ASV blaugelb Offenhausen',
+      title: 'blaugelb Offenhausen – Ausdauersportverein',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         {
           name: 'description',
           content:
-            'ASV blaugelb Offenhausen – Ausdauersportverein im Herzen des Hausruckviertels. Laufen, Radfahren und gemeinsam aktiv sein.',
+            'Ausdauersportverein blaugelb Offenhausen im oberösterreichischen Hausruckviertel – Laufen, Radfahren und Schwimmen.',
         },
         { name: 'theme-color', content: '#0b4f9e' },
       ],

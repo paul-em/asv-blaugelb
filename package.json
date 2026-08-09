@@ -2,7 +2,7 @@
   "name": "asv-blaugelb-offenhausen",
   "private": true,
   "type": "module",
-  "description": "Statische Vereinsseite des ASV blaugelb Offenhausen (Ausdauersportverein)",
+  "description": "Statische Vereinsseite des Ausdauersportvereins blaugelb Offenhausen",
   "scripts": {
     "dev": "nuxt dev",
     "build": "nuxt build",

@@ -1,9 +1,18 @@
 <script setup lang="ts">
-import { club, sports, events, trainings } from '~/data/site'
+import { club, sports, events, history, freibad, trainings } from '~/data/site'
 
 useHead({ title: `${club.name} – ${club.tagline}` })
 
-const nextEvents = events.slice(0, 3)
+// Solange keine Termine ausgeschrieben sind, zeigen wir den Rückblick.
+const hasEvents = computed(() => events.length > 0)
+const teaserEvents = computed(() =>
+  hasEvents.value ? events.slice(0, 3) : history.slice(0, 3),
+)
+
+// Schwimmzeiten erst anzeigen, wenn die Freibad-Vereinbarung in Kraft ist.
+const swimSlots = computed(() =>
+  freibad.aktiv ? trainings : trainings.filter((t) => !t.freibad),
+)
 </script>
 
 <template>
@@ -45,7 +54,7 @@ const nextEvents = events.slice(0, 3)
         <div
           class="mx-auto flex aspect-square w-64 items-center justify-center rounded-full bg-blau-800/60 md:w-80"
         >
-          <LogoMark class="h-40 w-40 md:h-52 md:w-52" />
+          <LogoMark variant="invers" class="h-40 w-40 md:h-52 md:w-52" />
         </div>
       </div>
     </div>
@@ -83,33 +92,50 @@ const nextEvents = events.slice(0, 3)
     <div class="mx-auto grid max-w-6xl gap-10 px-4 py-20 md:grid-cols-2">
       <div>
         <h2 class="text-3xl font-extrabold tracking-tight text-blau-900">
-          Komm einfach vorbei
+          Schwimmen im Freibad
         </h2>
         <p class="mt-3 text-slate-600">
-          Unsere Trainings sind offen für alle – egal ob du gerade erst
-          anfängst oder dich auf deinen nächsten Wettkampf vorbereitest.
-          Schnupper unverbindlich rein.
+          Gemeinsam mit der Marktgemeinde Offenhausen können unsere Mitglieder
+          das Sportbecken des Freibades außerhalb der regulären Öffnungszeiten
+          zum Training nutzen – früh vor der Öffnung und abends nach dem
+          Badeschluss.
         </p>
         <NuxtLink
           to="/training"
           class="mt-6 inline-flex items-center gap-2 font-bold text-blau-700 hover:text-blau-900"
         >
-          Alle Trainingszeiten
+          Zeiten und Voraussetzungen
           <AppIcon name="arrow" class="h-4 w-4" />
         </NuxtLink>
       </div>
-      <ul class="space-y-3">
+
+      <div
+        v-if="!swimSlots.length"
+        class="flex items-start gap-4 rounded-xl border border-gelb-400 bg-gelb-50 p-5"
+      >
+        <span
+          class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gelb-400 text-blau-950"
+        >
+          <AppIcon name="clock" class="h-5 w-5" />
+        </span>
+        <div>
+          <p class="font-bold text-blau-950">In Vorbereitung</p>
+          <p class="mt-1 text-sm leading-relaxed text-slate-700">
+            {{ freibad.statusNote }}
+          </p>
+        </div>
+      </div>
+
+      <ul v-else class="space-y-3">
         <li
-          v-for="t in trainings"
+          v-for="t in swimSlots"
           :key="t.day + t.title"
           class="flex items-center gap-4 rounded-xl border border-slate-200 bg-white p-4"
         >
           <div
-            class="flex w-20 shrink-0 flex-col items-center rounded-lg bg-blau-900 px-2 py-2 text-center text-white"
+            class="flex w-24 shrink-0 flex-col items-center rounded-lg bg-blau-900 px-2 py-2 text-center text-white"
           >
-            <span class="text-xs font-semibold uppercase">{{
-              t.day.slice(0, 2)
-            }}</span>
+            <span class="text-xs font-semibold">{{ t.day }}</span>
             <span class="text-[11px] text-blau-200">{{ t.time || 'n. V.' }}</span>
           </div>
           <div>
@@ -129,7 +155,11 @@ const nextEvents = events.slice(0, 3)
           Unsere Veranstaltungen
         </h2>
         <p class="mt-3 text-slate-600">
-          Diese Bewerbe organisiert der ASV blaugelb für die Region.
+          {{
+            hasEvents
+              ? 'Diese Bewerbe organisiert blaugelb Offenhausen für die Region.'
+              : 'Von 2013 bis 2017 haben wir jedes Jahr ein eigenes Rennen in Bachstätten ausgetragen.'
+          }}
         </p>
       </div>
       <NuxtLink
@@ -141,7 +171,7 @@ const nextEvents = events.slice(0, 3)
       </NuxtLink>
     </div>
     <div class="mt-10 grid gap-6 md:grid-cols-3">
-      <EventCard v-for="e in nextEvents" :key="e.name" :event="e" />
+      <EventCard v-for="e in teaserEvents" :key="e.name" :event="e" />
     </div>
   </section>
 
@@ -154,7 +184,7 @@ const nextEvents = events.slice(0, 3)
         Lust auf gemeinsames Training?
       </h2>
       <p class="max-w-xl text-blau-100">
-        Werde Teil des ASV blaugelb Offenhausen und erlebe Ausdauersport in
+        Werde Teil von blaugelb Offenhausen und erlebe Ausdauersport in
         einer starken Gemeinschaft.
       </p>
       <NuxtLink

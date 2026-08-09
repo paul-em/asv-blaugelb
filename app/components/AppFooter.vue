@@ -14,7 +14,7 @@ const socials = computed(() =>
     <div class="mx-auto grid max-w-6xl gap-10 px-4 py-14 md:grid-cols-3">
       <div>
         <div class="flex items-center gap-3">
-          <LogoMark class="h-10 w-10" />
+          <LogoMark variant="invers" compact class="h-10 w-10" />
           <span class="font-extrabold text-white">{{ club.shortName }}</span>
         </div>
         <p class="mt-4 max-w-xs text-sm text-blau-200">

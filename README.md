@@ -1,7 +1,7 @@
-# ASV blaugelb Offenhausen – Vereinsseite
+# blaugelb Offenhausen – Vereinsseite
 
-Statische Website des **ASV blaugelb Offenhausen** (Ausdauersportverein,
-4625 Offenhausen, Oberösterreich). Vollständig statisch – ohne Login, ohne
+Statische Website des **Ausdauersportvereins blaugelb Offenhausen**
+(4625 Offenhausen, Oberösterreich). Vollständig statisch – ohne Login, ohne
 Datenbank, ohne Server-Logik.
 
 ## Tech-Stack
@@ -30,8 +30,8 @@ automatisch erkannt.
 ## Inhalte pflegen
 
 Fast alle Texte, Termine, Trainingszeiten, Vorstand und Kontaktdaten stehen
-zentral in **`app/data/site.ts`**. Dort markierte `TODO`-Felder müssen noch
-befüllt werden (siehe Frageliste, die mit diesem Projekt übergeben wurde).
+zentral in **`app/data/site.ts`**. Die Herkunft der Daten ist in `docs/`
+dokumentiert – dort steht auch, was noch offen ist.
 
 ## Struktur
 
@@ -42,11 +42,34 @@ app/
   data/site.ts          # ← zentrale Inhaltsdatei
   layouts/default.vue
   pages/                # index, verein, training, termine, mitglied, kontakt, impressum
+docs/                   # Vereinsdaten, Freibad, Historie, offene Punkte
 public/                 # favicon, robots.txt (statische Assets)
 ```
 
-## Hinweis
+## Dokumentation
 
-Die alte Seite (blaugelb.offenhausen.at) war beim Erstellen nicht abrufbar,
-daher beruhen einige Inhalte auf öffentlich auffindbaren Informationen und
-Platzhaltern. Bitte vor dem Live-Gang alle `TODO`-Stellen prüfen.
+| Datei | Inhalt |
+| --- | --- |
+| [`docs/vereinsdaten.md`](docs/vereinsdaten.md) | Stammdaten, ZVR, Vorstand, Statuten (Fassung 2017) |
+| [`docs/freibad.md`](docs/freibad.md) | Freibad-Kooperation mit der Marktgemeinde |
+| [`docs/historie.md`](docs/historie.md) | Veranstaltungen 2013–2017, Inhalte der alten Website |
+| [`docs/offene-punkte.md`](docs/offene-punkte.md) | Was vor dem Go-live noch fehlt |
+
+## Hinweise
+
+**Vor dem Live-Gang** die Punkte in [`docs/offene-punkte.md`](docs/offene-punkte.md)
+abarbeiten – am dringendsten die Mitgliedsbeiträge, da bereits Anfragen für
+Mitgliedschaften eingehen.
+
+**Freibad-Angebot:** Die Vereinbarung mit der Marktgemeinde ist in Kraft,
+`freibad.aktiv` in `app/data/site.ts` steht auf `true`. Über dieses Flag lässt
+sich das Angebot bei Bedarf (z. B. außerhalb der Badesaison) wieder ausblenden.
+
+**Logo:** `app/components/LogoMark.vue` kennt die Varianten `tile` (Standard),
+`invers` (dunkle Flächen) und `plain` (freistehend) sowie `compact` für
+Darstellungsgrößen von 28–60 px. Unter 28 px `public/favicon.svg` verwenden.
+
+**Alte Website:** Von `blaugelb.offenhausen.at` antwortet nur noch die
+Startseite, alle Unterseiten liefern 404. Die dort noch erreichbaren Inhalte
+(Logo, Renn-Fotos, Ausschreibungs-PDFs) sind in `docs/historie.md` erfasst und
+sollten gesichert werden, bevor der alte Server abgedreht wird.

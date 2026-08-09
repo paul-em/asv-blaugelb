@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { club } from '~/data/site'
+
 defineProps<{ title: string; subtitle?: string }>()
 </script>
 
@@ -6,7 +8,7 @@ defineProps<{ title: string; subtitle?: string }>()
   <section class="bg-grid bg-blau-900 text-white">
     <div class="mx-auto max-w-6xl px-4 py-16 md:py-20">
       <p class="text-sm font-bold uppercase tracking-widest text-gelb-400">
-        ASV blaugelb Offenhausen
+        {{ club.name }}
       </p>
       <h1 class="mt-2 text-3xl font-extrabold tracking-tight md:text-5xl">
         {{ title }}
