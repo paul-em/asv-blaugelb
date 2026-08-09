@@ -103,9 +103,10 @@ Quelle bestätigen und wurden gestrichen:
 - Treffpunkt „Mehrzweckhalle Offenhausen" – nicht belegt (belegt ist die
   *Turnhalle* als Dusch- und Parkmöglichkeit bei Rennen)
 
-## Nicht auf die Website
+## Bankverbindung
 
-Die Nenngeld-Bankverbindung des Vereins (Sparkasse Lambach) steht in den
-öffentlichen Ausschreibungs-PDFs von 2017. Sie wird hier nicht wiederholt und
-gehört nur dann auf die neue Seite, wenn wieder Nenngelder eingehoben werden –
-und dann bewusst als Entscheidung des Vorstands.
+Die Bankverbindung des Vereins (Sparkasse Lambach) stand schon in den
+öffentlichen Ausschreibungs-PDFs von 2017 als Nenngeld-Konto. Sie steht seit
+09.08.2026 – gemeinsam mit dem Konto bei der Raiffeisenbank Eberschwang und auf
+ausdrückliche Freigabe – als Konto für den **Mitgliedsbeitrag** auf der Seite
+`/mitgliedschaft`, siehe [vereinsdaten.md](vereinsdaten.md).

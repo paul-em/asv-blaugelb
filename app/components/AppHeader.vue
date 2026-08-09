@@ -42,7 +42,7 @@ watch(
           {{ item.label }}
         </NuxtLink>
         <NuxtLink
-          to="/mitglied"
+          to="/mitgliedschaft"
           class="ml-2 rounded-lg bg-gelb-400 px-4 py-2 text-sm font-bold text-blau-950 transition hover:bg-gelb-300"
         >
           Jetzt mitmachen

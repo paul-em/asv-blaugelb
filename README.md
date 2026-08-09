@@ -41,16 +41,30 @@ app/
   components/           # Header, Footer, Logo, Icons, Karten
   data/site.ts          # ← zentrale Inhaltsdatei
   layouts/default.vue
-  pages/                # index, verein, training, termine, mitglied, kontakt, impressum
-docs/                   # Vereinsdaten, Freibad, Historie, offene Punkte
+  pages/                # index, verein, angebot, mitgliedschaft, kontakt,
+                        # impressum, datenschutz
+docs/                   # Vereinsdaten, Angebot, Freibad, Historie, offene Punkte
 public/                 # favicon, robots.txt (statische Assets)
 ```
+
+## Seiten
+
+| Seite | Inhalt |
+| --- | --- |
+| `/` | Begrüßung, Angebot nach Saison, Einladung an neue Mitglieder, Rückblick 2013–2017 |
+| `/verein` | Wer wir sind, Vereinszweck, Sportarten, Vorstand |
+| `/angebot` | Saisonprogramm im Detail inkl. Freibad-Regeln |
+| `/mitgliedschaft` | Beitrag, Ablauf des Beitritts, Bankverbindungen |
+| `/kontakt` | E-Mail, WhatsApp, Vereinssitz, Trainingszeiten im Überblick |
+| `/impressum` | Offenlegung nach § 5 ECG und §§ 24, 25 MedienG |
+| `/datenschutz` | Datenschutzerklärung (DSGVO/DSG) |
 
 ## Dokumentation
 
 | Datei | Inhalt |
 | --- | --- |
-| [`docs/vereinsdaten.md`](docs/vereinsdaten.md) | Stammdaten, ZVR, Vorstand, Statuten (Fassung 2017) |
+| [`docs/vereinsdaten.md`](docs/vereinsdaten.md) | Stammdaten, ZVR, Vorstand, Beiträge, Bankverbindungen, Statuten (Fassung 2017) |
+| [`docs/angebot.md`](docs/angebot.md) | Saisonprogramm, Quelle der Trainingszeiten |
 | [`docs/freibad.md`](docs/freibad.md) | Freibad-Kooperation mit der Marktgemeinde |
 | [`docs/historie.md`](docs/historie.md) | Veranstaltungen 2013–2017, Inhalte der alten Website |
 | [`docs/offene-punkte.md`](docs/offene-punkte.md) | Was vor dem Go-live noch fehlt |
@@ -58,8 +72,17 @@ public/                 # favicon, robots.txt (statische Assets)
 ## Hinweise
 
 **Vor dem Live-Gang** die Punkte in [`docs/offene-punkte.md`](docs/offene-punkte.md)
-abarbeiten – am dringendsten die Mitgliedsbeiträge, da bereits Anfragen für
-Mitgliedschaften eingehen.
+abarbeiten – am dringendsten der Link zur Beitrittserklärung.
+
+**WhatsApp:** `contact.whatsapp` verweist auf die Nummer des Obmanns; die
+WhatsApp-Schaltflächen erscheinen auf Startseite, Kontakt, Angebot und
+Mitgliedschaft. Feld leeren blendet sie überall aus, dann bleibt E-Mail der
+einzige verlinkte Kanal.
+
+**Beitrittserklärung:** Link zum Microsoft Form in `membershipForm.url`
+eintragen – dann führt `/mitgliedschaft` dorthin (statt zum Hinweis auf den
+formlosen Beitritt per E-Mail) und die Datenschutzerklärung ergänzt automatisch
+den Absatz zur Verarbeitung durch Microsoft.
 
 **Freibad-Angebot:** Die Vereinbarung mit der Marktgemeinde ist in Kraft,
 `freibad.aktiv` in `app/data/site.ts` steht auf `true`. Über dieses Flag lässt

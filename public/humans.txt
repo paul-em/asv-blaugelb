@@ -1,5 +1,5 @@
 /* TEAM */
-	Verein: ASV blaugelb Offenhausen (Ausdauersportverein)
+	Verein: blaugelb Offenhausen (Ausdauersportverein blaugelb Offenhausen)
 	Ort: 4625 Offenhausen, Oberösterreich, Österreich
 	Website: https://blaugelb.offenhausen.at
 

@@ -15,6 +15,7 @@ Stellen pflegen.
 | Tätigkeitsbereich | ganz Österreich | Statuten § 1 Abs. 2 |
 | Vereinsanschrift | Bachstätten 4, 4625 Offenhausen | bestätigt 09.08.2026 |
 | E-Mail | blaugelb@outlook.com | Briefkopf Nutzungsvereinbarung Freibad |
+| WhatsApp | +43 650 2114679 (Obmann Martin Muckenhuber) | bestätigt 10.08.2026 |
 | Inhaltlich verantwortlich (Website) | Franz Emathinger, Paul Emathinger | bestätigt 09.08.2026 |
 | Zweigvereine | nicht beabsichtigt | Statuten § 1 Abs. 3 |
 | Status | gemeinnützig i. S. d. Bundesabgabenordnung, nicht auf Gewinn gerichtet | Statuten § 2 |
@@ -98,7 +99,30 @@ zum nächsten Termin. Maßgeblich ist das Datum der Postaufgabe.
 **Stimmrecht** (§ 7 Abs. 1): nur ordentliche und Ehrenmitglieder.
 
 **Beiträge**: Höhe von Beitrittsgebühr und Mitgliedsbeiträgen setzt die
-Generalversammlung fest (§ 10 lit. f). **Aktuelle Beträge liegen nicht vor.**
+Generalversammlung fest (§ 10 lit. f).
+
+| Kategorie | Beitrag pro Jahr | Quelle |
+| --- | --- | --- |
+| Einzelmitglied | 25 € | Projektspezifikation Franz Emathinger, 09.08.2026 |
+| jedes weitere Familienmitglied im selben Haushalt | 20 € | ebd. |
+| Kinder bis 15 Jahre | frei | ebd. |
+
+Eine gesonderte **Beitrittsgebühr** wird derzeit nicht eingehoben bzw. ist nicht
+beziffert; außerordentliche Mitglieder (Förderer) zahlen laut Statuten einen
+erhöhten Beitrag nach Vereinbarung.
+
+## Bankverbindungen
+
+Für Mitgliedsbeiträge, bestätigt in der Projektspezifikation vom 09.08.2026 und
+dort ausdrücklich für die Website freigegeben:
+
+| Bank | IBAN |
+| --- | --- |
+| Sparkasse Lambach | AT95 2031 7077 0108 4571 |
+| Raiffeisenbank Eberschwang | AT70 3408 1000 0005 1565 |
+
+Der BIC wird bewusst weggelassen – innerhalb des SEPA-Raums genügt die IBAN.
+Verwendungszweck laut Website: „Mitgliedsbeitrag + Vor- und Nachname".
 
 ## Organe und Fristen
 

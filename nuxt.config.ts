@@ -39,7 +39,7 @@ export default defineNuxtConfig({
         {
           name: 'description',
           content:
-            'Ausdauersportverein blaugelb Offenhausen im oberösterreichischen Hausruckviertel – Laufen, Radfahren und Schwimmen.',
+            'Ausdauersportverein blaugelb Offenhausen im oberösterreichischen Hausruckviertel – Turnen, e-MTB-Ausfahrten, Schwimmen und Geselligkeit. Offen für neue Mitglieder.',
         },
         { name: 'theme-color', content: '#0b4f9e' },
       ],

@@ -6,7 +6,8 @@
 
   Belegte Daten stammen aus den Vereinsdokumenten und sind in docs/
   dokumentiert:
-    docs/vereinsdaten.md   Stammdaten, Vorstand, Statuten (Fassung 2017)
+    docs/vereinsdaten.md   Stammdaten, Vorstand, Beiträge, Statuten (2017)
+    docs/angebot.md        Saisonprogramm, Quelle der Trainingszeiten
     docs/freibad.md        Freibad-Kooperation mit der Marktgemeinde
     docs/historie.md       Veranstaltungen 2013–2017, alte Website
     docs/offene-punkte.md  was noch fehlt
@@ -23,9 +24,9 @@ export const club = {
   officialName: 'Ausdauersportverein blaugelb Offenhausen',
   shortName: 'blaugelb',
   tagline: 'Ausdauersportverein',
-  claim: 'Laufen. Radfahren. Schwimmen. Gemeinsam ankommen.',
+  claim: 'Bewegung, Gemeinschaft und Geselligkeit – das ganze Jahr über.',
   intro:
-    'Der Ausdauersportverein blaugelb Offenhausen ist ein gemeinnütziger Sportverein aus der Marktgemeinde Offenhausen im oberösterreichischen Hausruckviertel. Vereinszweck ist die körperliche Ertüchtigung unserer Mitglieder durch Ausdauersport – Laufen, Radfahren und Schwimmen. Bekannt geworden sind wir durch unsere Cross- und Mountainbike-Rennen auf den Wiesenrundkursen in Bachstätten.',
+    'Der Ausdauersportverein blaugelb Offenhausen ist ein gemeinnütziger Sportverein aus der Marktgemeinde Offenhausen im oberösterreichischen Hausruckviertel. Wir turnen im Winter, fahren im Frühjahr mit dem e-Mountainbike und schwimmen im Sommer im Freibad – offen für alle, die Bewegung und Gemeinschaft verbinden wollen.',
   // Wortlaut aus § 2 der Statuten (Fassung 03.12.2017).
   purpose:
     'Der Verein bezweckt die körperliche Ertüchtigung seiner Mitglieder durch sportliche Betätigung, insbesondere die Pflege von Ausdauersportarten (Laufen, Radfahren, Schwimmen).',
@@ -46,6 +47,12 @@ export const contact = {
   // TODO: Vereinstelefonnummer. Bekannt ist nur eine Privat-Mobilnummer
   // aus der Ausschreibung 2017 – bewusst nicht übernommen.
   phone: '',
+  // WhatsApp ist der wichtigste Kanal zu den Mitgliedern. Die Nachrichten
+  // landen bei Obmann Martin Muckenhuber (+43 650 2114679), bestätigt am
+  // 10.08.2026. Solange das Feld leer ist, werden alle WhatsApp-Schaltflächen
+  // ausgeblendet.
+  whatsapp: 'https://wa.me/436502114679',
+  whatsappName: 'Martin Muckenhuber, Obmann',
   zvr: '904297698',
   // Vertretung nach außen laut Statuten § 13 Abs. 2.
   representative: 'Martin Muckenhuber, Obmann',
@@ -63,9 +70,8 @@ export const social = {
 
 export const nav = [
   { label: 'Verein', to: '/verein' },
-  { label: 'Training', to: '/training' },
-  { label: 'Termine', to: '/termine' },
-  { label: 'Mitglied werden', to: '/mitglied' },
+  { label: 'Angebot', to: '/angebot' },
+  { label: 'Mitgliedschaft', to: '/mitgliedschaft' },
   { label: 'Kontakt', to: '/kontakt' },
 ]
 
@@ -79,7 +85,7 @@ export const sports = [
   {
     icon: 'bike',
     title: 'Radfahren',
-    text: 'Mountainbike und Querfeldein auf den Rundkursen in Bachstätten – hügelig, technisch und mit Rennen bis hinauf zur Landesmeisterschaft.',
+    text: 'Heute gemeinsame e-MTB-Ausfahrten rund um Offenhausen, früher Mountainbike- und Querfeldein-Rennen auf den Rundkursen in Bachstätten.',
   },
   {
     icon: 'swim',
@@ -89,9 +95,120 @@ export const sports = [
 ]
 
 /*
+  Das Angebot nach Saison – der Kern der Seite.
+  Zeiten und Orte laut Vereinsangabe, siehe docs/angebot.md.
+  `freibad: true` verknüpft die Sommersaison mit den Regeln der
+  Freibad-Kooperation weiter unten.
+*/
+export type Season = {
+  id: string
+  icon: string
+  season: string
+  title: string
+  when: string
+  place: string
+  summary: string
+  text: string[]
+  points: string[]
+  /** Zusatzhinweis unter den Stichpunkten */
+  note?: string
+  /** blendet Zeiten, Voraussetzungen und Regeln der Freibad-Kooperation ein */
+  freibad?: boolean
+}
+
+export const seasons: Season[] = [
+  {
+    id: 'winter',
+    icon: 'snow',
+    season: 'Wintersaison',
+    title: 'Turnen & Hockey',
+    when: 'Montag, 19:00 Uhr',
+    place: 'Turnhalle Offenhausen',
+    summary:
+      'Kräftigungs- und Ausdauerübungen in der Halle, zum Abschluss Hockey.',
+    text: [
+      'Im Winter treffen wir uns wöchentlich in der Turnhalle Offenhausen. Wechselnde Vorturnerinnen und Vorturner gestalten das Programm – so bleibt jede Einheit abwechslungsreich.',
+      'Das Niveau ist bunt gemischt: Einsteigerinnen und Einsteiger sind genauso willkommen wie Geübte. Im Vordergrund stehen Bewegung, Freude und Gemeinschaft.',
+    ],
+    points: [
+      'Abwechslungsreiches Programm durch wechselnde Vorturner',
+      'Kräftigungs- und Ausdauereinheiten',
+      'Hockey zum Abschluss',
+    ],
+  },
+  {
+    id: 'uebergang',
+    icon: 'bike',
+    season: 'Übergangssaison',
+    title: 'e-MTB-Ausfahrten',
+    when: 'Donnerstag, 18:00 Uhr',
+    place: 'Rund um Offenhausen',
+    summary: 'Gemeinsame Ausfahrten auf Forstwegen und Güterwegen der Umgebung.',
+    text: [
+      'Mit dem Frühjahr starten die gemeinsamen e-Mountainbike-Ausfahrten. Donnerstagabends fahren wir rund um Offenhausen – die Landschaft des Hausruckviertels gibt die Kulisse dafür ab.',
+      'Durch die elektrische Unterstützung kommen unterschiedliche Fitnesslevels gut miteinander zurecht. Nach der Tour bleibt meistens Zeit für einen gemütlichen Ausklang.',
+    ],
+    points: [
+      'Gemeinsame Gruppenausfahrten für alle Fitnessstufen',
+      'Strecken rund um Offenhausen',
+      'e-MTB (elektrisch unterstützt) – auch für Einsteiger geeignet',
+    ],
+    note: 'Der genaue Treffpunkt wird kurzfristig in der Vereinsgruppe bekanntgegeben.',
+  },
+  {
+    id: 'sommer',
+    icon: 'swim',
+    season: 'Sommersaison',
+    title: 'Schwimmen im Freibad',
+    when: 'Täglich außerhalb der Öffnungszeiten',
+    place: 'Freibad Offenhausen – Sportbecken',
+    summary:
+      'Schwimmtraining im Sportbecken, früh vor der Öffnung und abends nach dem Badeschluss.',
+    text: [
+      'Gemeinsam mit der Marktgemeinde Offenhausen können unsere Mitglieder das Sportbecken des Freibades außerhalb der regulären Öffnungszeiten nutzen – in Ruhe und ohne Betrieb.',
+      'Schwimmen ist die gelenkschonendste unserer Sportarten und der ideale Ausgleich zu Turnen und Radfahren. Für den Zugang gelten die Regeln der Nutzungsvereinbarung.',
+    ],
+    points: [
+      'Ausdauerschwimmen im Sportbecken',
+      'Frühschwimmen ab 05:00 Uhr, Abendschwimmen bis 22:00 Uhr',
+      'Nur für Mitglieder mit freigeschaltetem Zutritt',
+    ],
+    freibad: true,
+  },
+  {
+    id: 'anlassbezogen',
+    icon: 'group',
+    season: 'Anlassbezogen',
+    title: 'Gemeinsame Veranstaltungen',
+    when: 'Nach Ankündigung',
+    place: 'Offenhausen und Umgebung',
+    summary:
+      'Teilnahme an Gemeinde- und Sportveranstaltungen – weil Sport im Team am schönsten ist.',
+    text: [
+      'Neben dem regulären Trainingsbetrieb nimmt der Verein an ausgewählten Gemeinde- und Sportveranstaltungen teil und tritt dort gemeinsam als blaugelb Offenhausen auf.',
+      'Diese Anlässe sind ein wichtiger Teil unserer Vereinskultur: Sport verbindet – und wir sind gerne Teil der Gemeinschaft in Offenhausen.',
+    ],
+    points: [
+      'Teilnahme an Veranstaltungen der Marktgemeinde',
+      'Sportliche Bewerbe und Volksläufe nach Möglichkeit',
+      'Gesellige Vereinsveranstaltungen',
+    ],
+  },
+]
+
+/*
+  Laufen und Radfahren außerhalb der fixen Termine.
+  TODO: Gibt es einen regelmäßigen Lauftreff? Tag, Uhrzeit, Treffpunkt.
+*/
+export const individualSports = {
+  title: 'Laufen & Radfahren abseits der fixen Termine',
+  text: 'Laufen und Radfahren gehören seit der Gründung zum Verein – über Jahre hinweg haben wir eigene Crossläufe und Mountainbike-Rennen in Bachstätten ausgetragen. Feste wöchentliche Lauftreffs gibt es derzeit nicht. Wenn du mitlaufen oder mitfahren möchtest, melde dich einfach – wir bringen dich mit den passenden Leuten zusammen.',
+}
+
+/*
   Freibad-Kooperation mit der Marktgemeinde Offenhausen.
-  Seit 09.08.2026 in Kraft – die Zeiten werden auf Startseite und
-  Trainingsseite ausgespielt. Details und Quellen: docs/freibad.md
+  Seit 09.08.2026 in Kraft – die Details werden in der Sommersaison
+  ausgespielt. Quellen: docs/freibad.md
 */
 export const freibad = {
   aktiv: true,
@@ -120,10 +237,7 @@ export const freibad = {
 }
 
 /*
-  Trainingszeiten.
-  Aktuell ist das geplante Schwimmtraining im Freibad das einzige belegte
-  regelmäßige Angebot – es wird nur angezeigt, wenn `freibad.aktiv` true ist.
-  TODO: Gibt es regelmäßige Lauf- oder Radtreffs? Tag, Uhrzeit, Treffpunkt.
+  Schwimmzeiten im Freibad – nur sichtbar, solange `freibad.aktiv` true ist.
 */
 export const trainings = [
   {
@@ -218,14 +332,44 @@ export const board = [
 
 /*
   Mitgliedsbeiträge – die Höhe setzt laut Statuten § 10 lit. f die
-  Generalversammlung fest.
-  TODO: aktuelle Beträge eintragen.
+  Generalversammlung fest. Beträge laut Vereinsangabe, siehe
+  docs/vereinsdaten.md.
 */
 export const fees = [
-  { type: 'Beitrittsgebühr', price: '' },
-  { type: 'Ordentliche Mitglieder', price: '' },
-  { type: 'Außerordentliche Mitglieder (Förderer)', price: '' },
+  { type: 'Einzelmitglied', price: '25 €' },
+  { type: 'Jedes weitere Familienmitglied im selben Haushalt', price: '20 €' },
+  { type: 'Kinder bis 15 Jahre', price: 'kostenlos' },
 ]
+
+export const feeNote =
+  'Die Beträge gelten pro Vereinsjahr und werden nach dem Beitritt fällig. Außerordentliche Mitglieder (Förderer) unterstützen den Verein mit einem höheren Beitrag nach Vereinbarung.'
+
+/*
+  Bankverbindungen für den Mitgliedsbeitrag.
+  BIC ist bewusst nicht angeführt – für Überweisungen innerhalb des SEPA-Raums
+  genügt die IBAN.
+*/
+export const bankAccounts = [
+  { bank: 'Sparkasse Lambach', iban: 'AT95 2031 7077 0108 4571' },
+  { bank: 'Raiffeisenbank Eberschwang', iban: 'AT70 3408 1000 0005 1565' },
+]
+
+export const paymentReference = 'Mitgliedsbeitrag + Vor- und Nachname'
+
+/*
+  Beitrittserklärung als Online-Formular (Microsoft Forms).
+  TODO: Link eintragen, sobald das Formular fertig ist.
+
+  Solange `url` leer ist, weist die Seite auf den formlosen Beitritt per E-Mail
+  hin (Statuten § 5). Sobald ein Link hinterlegt ist, erscheinen zusätzlich der
+  Hinweis auf Microsoft als Anbieter und der entsprechende Absatz in der
+  Datenschutzerklärung.
+*/
+export const membershipForm = {
+  url: '',
+  label: 'Beitrittserklärung ausfüllen',
+  provider: 'Microsoft Forms',
+}
 
 // Mitgliedschaft nach den Statuten (Fassung 03.12.2017)
 export const membership = {
@@ -246,4 +390,26 @@ export const membership = {
   join: 'Ein formloser Antrag beim Vorstand genügt – per E-Mail, mündlich oder schriftlich. Über die Aufnahme entscheidet der Vorstand.',
   leave:
     'Der Austritt ist zum Ende eines Kalenderjahres möglich. Die schriftliche Abmeldung muss bis zum 1. Oktober beim Vorstand eintreffen.',
+  benefits: [
+    {
+      icon: 'run',
+      title: 'Sport in jeder Saison',
+      text: 'Turnen, Hockey, e-MTB und Schwimmen – das ganze Jahr über ist etwas dabei.',
+    },
+    {
+      icon: 'group',
+      title: 'Gemeinschaft',
+      text: 'Ein kleiner Verein, in dem man einander kennt und die Geselligkeit ihren Platz hat.',
+    },
+    {
+      icon: 'swim',
+      title: 'Zugang zum Freibad',
+      text: 'Schwimmen im Sportbecken außerhalb der Öffnungszeiten – nach Freischaltung durch die Marktgemeinde.',
+    },
+    {
+      icon: 'check',
+      title: 'Niedrige Hürde',
+      text: 'Kein Leistungsdruck, kein hoher Beitrag, Kinder bis 15 Jahre sind gratis dabei.',
+    },
+  ],
 }

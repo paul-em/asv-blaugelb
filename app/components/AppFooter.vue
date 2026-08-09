@@ -36,6 +36,11 @@ const socials = computed(() =>
           <li>
             <NuxtLink to="/impressum" class="hover:text-white">Impressum</NuxtLink>
           </li>
+          <li>
+            <NuxtLink to="/datenschutz" class="hover:text-white"
+              >Datenschutz</NuxtLink
+            >
+          </li>
         </ul>
       </div>
 
@@ -51,6 +56,16 @@ const socials = computed(() =>
               contact.email
             }}</a>
           </p>
+          <p v-if="contact.whatsapp">
+            <a
+              :href="contact.whatsapp"
+              target="_blank"
+              rel="noopener"
+              class="hover:text-white"
+              >WhatsApp</a
+            >
+          </p>
+          <p>ZVR-Zahl: {{ contact.zvr }}</p>
         </address>
         <div v-if="socials.length" class="mt-4 flex gap-3">
           <a
