@@ -49,8 +49,8 @@ muss. Belegte Daten stehen in [vereinsdaten.md](vereinsdaten.md),
 - [ ] **Gründungsjahr.** Erster Website-Beitrag stammt vom 15.10.2013, die
       erste dokumentierte Veranstaltung ebenfalls 2013 – das Gründungsjahr
       selbst ist damit nicht belegt.
-- [ ] **Vorstand vollständig.** Vier von sechs Funktionen sind unbesetzt:
-      Obmann-Stv., Schriftführer-Stv., Kassier, Kassier-Stv.
+- [x] **Vorstand vollständig.** Alle sechs Funktionen sind besetzt
+      (Vereinsangabe 10.08.2026), siehe [vereinsdaten.md](vereinsdaten.md).
 - [ ] **Entgelt für die Zutrittsverwaltung.** Die Website nennt es als
       Voraussetzung, ohne Betrag. Falls die Höhe feststeht: ergänzen oder auf
       die Freibadtarife der Gemeinde verlinken.

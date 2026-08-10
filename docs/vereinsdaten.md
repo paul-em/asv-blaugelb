@@ -68,11 +68,11 @@ Wiederwahl möglich.
 | Funktion | Person | Quelle |
 | --- | --- | --- |
 | Obmann | Martin Muckenhuber | Unterschriftenblock Vereinbarung Gemeinde |
-| Obmann-Stellvertretung | *unbekannt* | – |
+| Obmann-Stellvertretung | Dieter Reinthaller | Vereinsangabe 10.08.2026 |
 | Schriftführer | Mag. Franz Emathinger, BSc | Vereinbarung Gemeinde |
-| Schriftführer-Stellvertretung | *unbekannt* | – |
-| Kassier | *unbekannt* | – |
-| Kassier-Stellvertretung | *unbekannt* | – |
+| Schriftführer-Stellvertretung | Horst Berger | Vereinsangabe 10.08.2026 |
+| Kassier | Dominik Hager | Vereinsangabe 10.08.2026 |
+| Kassier-Stellvertretung | Michael Aschl | Vereinsangabe 10.08.2026 |
 
 Vertretung nach außen: Obmann/Obfrau (§ 13 Abs. 2). Schriftliche
 Ausfertigungen brauchen Obmann **und** Schriftführer, in Geldangelegenheiten

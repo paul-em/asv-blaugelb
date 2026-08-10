@@ -326,15 +326,15 @@ export const history = [
 
 /*
   Vorstand – sechs Funktionen laut Statuten § 11 Abs. 1.
-  TODO: vier Funktionen sind noch offen.
+  Vollständig laut Vereinsangabe vom 10.08.2026.
 */
 export const board = [
   { role: 'Obmann', name: 'Martin Muckenhuber' },
-  { role: 'Obmann-Stellvertretung', name: '' },
+  { role: 'Obmann-Stellvertretung', name: 'Dieter Reinthaller' },
   { role: 'Schriftführer', name: 'Mag. Franz Emathinger, BSc' },
-  { role: 'Schriftführer-Stellvertretung', name: '' },
-  { role: 'Kassier', name: '' },
-  { role: 'Kassier-Stellvertretung', name: '' },
+  { role: 'Schriftführer-Stellvertretung', name: 'Horst Berger' },
+  { role: 'Kassier', name: 'Dominik Hager' },
+  { role: 'Kassier-Stellvertretung', name: 'Michael Aschl' },
 ]
 
 /*
