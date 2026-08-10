@@ -92,9 +92,13 @@ außerordentliche Mitglieder (Förderung durch erhöhten Beitrag), Ehrenmitglied
 schriftlich**. Der Vorstand entscheidet und kann die Aufnahme ohne Angabe von
 Gründen verweigern.
 
-**Austritt** (§ 6 Abs. 2): nur zum Ende eines Kalenderjahres. Die schriftliche
-Abmeldung muss **bis 1. Oktober** beim Vorstand eintreffen, sonst wirkt sie erst
-zum nächsten Termin. Maßgeblich ist das Datum der Postaufgabe.
+**Austritt** (§ 6 Abs. 2, neue Statuten): **jederzeit** ohne Angabe von Gründen,
+schriftlich per Post oder E-Mail an den Vorstand. Langt die Erklärung **bis
+31. März** ein, endet die Mitgliedschaft sofort und ein noch nicht bezahlter
+Beitrag entfällt; danach endet sie mit **31. Dezember** des laufenden Jahres und
+der Beitrag für dieses Jahr bleibt geschuldet. Bereits bezahlte Beiträge werden
+nicht rückerstattet. (Die Fassung der Statuten 2017 – nur zum Jahresende,
+Abmeldung bis 1. Oktober – gilt nicht mehr.)
 
 **Stimmrecht** (§ 7 Abs. 1): nur ordentliche und Ehrenmitglieder.
 

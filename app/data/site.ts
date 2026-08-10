@@ -391,7 +391,7 @@ export const membership = {
   ],
   join: 'Ein formloser Antrag beim Vorstand genügt – per E-Mail, mündlich oder schriftlich. Über die Aufnahme entscheidet der Vorstand.',
   leave:
-    'Der Austritt ist zum Ende eines Kalenderjahres möglich. Die schriftliche Abmeldung muss bis zum 1. Oktober beim Vorstand eintreffen.',
+    'Der Austritt ist jederzeit ohne Angabe von Gründen möglich – schriftlich per Post oder E-Mail an den Vorstand. Langt die Erklärung bis zum 31. März ein, endet die Mitgliedschaft sofort und ein noch nicht bezahlter Beitrag entfällt. Danach endet sie mit 31. Dezember des laufenden Jahres; der Beitrag für dieses Jahr bleibt geschuldet. Bereits bezahlte Beiträge werden nicht rückerstattet.',
   benefits: [
     {
       icon: 'run',
