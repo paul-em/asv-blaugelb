@@ -337,13 +337,12 @@ export const board = [
   docs/vereinsdaten.md.
 */
 export const fees = [
-  { type: 'Einzelmitglied', price: '25 €' },
-  { type: 'Jedes weitere Familienmitglied im selben Haushalt', price: '20 €' },
-  { type: 'Kinder bis 15 Jahre', price: 'kostenlos' },
+  { type: 'Ordentliches Mitglied', price: '25 €' },
+  { type: 'Außerordentliches Mitglied (Förderer)', price: 'frei wählbar, über 25 €' },
 ]
 
 export const feeNote =
-  'Die Beträge gelten pro Vereinsjahr und werden nach dem Beitritt fällig. Außerordentliche Mitglieder (Förderer) unterstützen den Verein mit einem höheren Beitrag nach Vereinbarung.'
+  'Der Beitrag gilt pro Vereinsjahr und wird von der Generalversammlung festgesetzt (§ 10 der Statuten). Außerordentliche Mitglieder – Förderer – unterstützen den Verein mit einem selbst gewählten höheren Beitrag.'
 
 /*
   Bankverbindung für den Mitgliedsbeitrag.
@@ -412,7 +411,7 @@ export const membership = {
     {
       icon: 'check',
       title: 'Niedrige Hürde',
-      text: 'Kein Leistungsdruck, kein hoher Beitrag, Kinder bis 15 Jahre sind gratis dabei.',
+      text: 'Kein Leistungsdruck, kein hoher Beitrag – 25 € im Jahr für alle.',
     },
   ],
 }

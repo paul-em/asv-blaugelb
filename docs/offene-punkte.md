@@ -22,8 +22,10 @@ muss. Belegte Daten stehen in [vereinsdaten.md](vereinsdaten.md),
       „blaugelb Offenhausen".
 - [x] **Saisonprogramm** (Turnen, e-MTB, Schwimmen, Anlassbezogen) mit Zeiten
       und Orten – Quelle siehe [angebot.md](angebot.md).
-- [x] **Mitgliedsbeiträge**: 25 € Einzelmitglied, 20 € je weiteres
-      Familienmitglied im Haushalt, Kinder bis 15 Jahre frei.
+- [x] **Mitgliedsbeiträge**: 25 € pauschal für ordentliche Mitglieder,
+      außerordentliche Mitglieder (Förderer) frei wählbar über 25 €.
+      Familienstaffel und Kinder-Gratismitgliedschaft entfallen (Entscheidung
+      E2, 10.08.2026).
 - [x] **Bankverbindung** für den Mitgliedsbeitrag steht auf `/mitgliedschaft`
       (Sparkasse Lambach). Das Konto bei der Raiffeisenbank Eberschwang wird
       aufgelöst und ist seit 10.08.2026 nicht mehr angeführt.

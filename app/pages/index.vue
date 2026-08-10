@@ -7,7 +7,7 @@ useHead({ title: `${club.name} – ${club.tagline}` })
 // der Rückblick auf die eigenen Rennen steht weiter unten.
 const hasEvents = computed(() => events.length > 0)
 const einzelbeitrag = computed(
-  () => fees.find((f) => f.type === 'Einzelmitglied')?.price ?? '',
+  () => fees.find((f) => f.type === 'Ordentliches Mitglied')?.price ?? '',
 )
 </script>
 
@@ -118,10 +118,9 @@ const einzelbeitrag = computed(
         </p>
         <p class="mt-4 leading-relaxed text-slate-600">
           Der Beitrag ist bewusst niedrig gehalten –
-          <strong class="text-blau-900"
-            >{{ einzelbeitrag }} im Jahr für Einzelmitglieder</strong
-          >, Kinder bis 15 Jahre sind gratis dabei. Schnuppern ist jederzeit
-          möglich, melde dich einfach vorher kurz bei uns.
+          <strong class="text-blau-900">{{ einzelbeitrag }} im Jahr, für alle gleich</strong
+          >. Schnuppern ist jederzeit möglich, melde dich einfach vorher kurz bei
+          uns.
         </p>
         <div class="mt-8 flex flex-wrap gap-3">
           <NuxtLink

@@ -103,9 +103,13 @@ Generalversammlung fest (§ 10 lit. f).
 
 | Kategorie | Beitrag pro Jahr | Quelle |
 | --- | --- | --- |
-| Einzelmitglied | 25 € | Projektspezifikation Franz Emathinger, 09.08.2026 |
-| jedes weitere Familienmitglied im selben Haushalt | 20 € | ebd. |
-| Kinder bis 15 Jahre | frei | ebd. |
+| Ordentliches Mitglied | 25 € | Entscheidung E2, 10.08.2026 |
+| Außerordentliches Mitglied (Förderer) | frei wählbar, über 25 € | ebd. |
+
+Es gilt ein **Pauschalbeitrag von 25 €** für alle ordentlichen Mitglieder. Die
+zuvor vorgesehene Familienstaffel (20 € je weiterem Familienmitglied im
+Haushalt) und die Gratismitgliedschaft für Kinder bis 15 Jahre entfallen mit
+Entscheidung E2 ersatzlos.
 
 Eine gesonderte **Beitrittsgebühr** wird derzeit nicht eingehoben bzw. ist nicht
 beziffert; außerordentliche Mitglieder (Förderer) zahlen laut Statuten einen
