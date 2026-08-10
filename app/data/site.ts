@@ -406,7 +406,7 @@ export const membership = {
     {
       icon: 'swim',
       title: 'Zugang zum Freibad',
-      text: 'Schwimmen im Sportbecken außerhalb der Öffnungszeiten – nach Freischaltung durch die Marktgemeinde.',
+      text: 'Schwimmen im Sportbecken außerhalb der Öffnungszeiten – für volljährige ordentliche Mitglieder mit Saisonkarte, nach Freischaltung durch die Marktgemeinde.',
     },
     {
       icon: 'check',
