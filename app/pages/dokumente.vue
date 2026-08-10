@@ -2,6 +2,10 @@
 import { club, contact, documentGroups } from '~/data/site'
 
 useHead({ title: `Dokumente – ${club.name}` })
+
+// baseURL endet immer auf "/" (z. B. "/" lokal oder "/asv-blaugelb/" auf
+// GitHub Pages) – so funktionieren die Downloads auch unter einem Unterpfad.
+const base = useRuntimeConfig().app.baseURL
 </script>
 
 <template>
@@ -29,7 +33,7 @@ useHead({ title: `Dokumente – ${club.name}` })
 
           <template v-if="d.file">
             <a
-              :href="d.file"
+              :href="`${base}${d.file}`"
               download
               class="mt-4 inline-flex items-center gap-2 rounded-xl bg-blau-900 px-5 py-3 font-bold text-white transition hover:bg-blau-800"
             >

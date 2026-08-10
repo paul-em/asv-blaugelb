@@ -384,10 +384,12 @@ export const membershipForm = {
 /*
   Dokumente zum Download unter /dokumente, gruppiert nach Anlass.
 
-  `file` ist der Pfad im Ordner `public/`, `size` die Dateigröße zur Anzeige
-  neben dem Link. Solange `file` leer ist, erscheint der Eintrag ohne
-  Download-Link mit dem Hinweis "folgt in Kürze" – so entstehen keine toten
-  Links, wenn ein Dokument noch nicht abgelegt ist.
+  `file` ist der Pfad im Ordner `public/` – ohne führenden Schrägstrich, weil
+  die Seite auf GitHub Pages unter einem Unterpfad liegt und die baseURL beim
+  Rendern davorgesetzt wird. `size` ist die Dateigröße zur Anzeige neben dem
+  Link. Solange `file` leer ist, erscheint der Eintrag ohne Download-Link mit
+  dem Hinweis "folgt in Kürze" – so entstehen keine toten Links, wenn ein
+  Dokument noch nicht abgelegt ist.
 
   Neue Fassungen mit neuem Datumspräfix ablegen (Dateinamen ohne Umlaute) und
   `file`, `size` und `stand` hier gemeinsam aktualisieren.
@@ -404,14 +406,14 @@ export const documentGroups = [
       {
         title: 'Beitrittserklärung',
         text: 'Das Formular für die Aufnahme in den Verein – mit Mitgliedsdaten, SEPA-Mandat und den freiwilligen Einwilligungen für Foto- und Videoaufnahmen sowie die WhatsApp-Gruppe.',
-        file: '/assets/dokumente/20260809_Beitrittserklaerung_ASV_blaugelb.pdf',
+        file: 'assets/dokumente/20260809_Beitrittserklaerung_ASV_blaugelb.pdf',
         size: '110 KB',
         stand: '09.08.2026',
       },
       {
         title: 'Datenschutzerklärung des Vereins',
         text: 'Wie wir mit den Daten unserer Mitglieder umgehen. Ergänzt die Datenschutzerklärung für diese Website.',
-        file: '/assets/dokumente/20260809_Datenschutzerklaerung_ASV_blaugelb.pdf',
+        file: 'assets/dokumente/20260809_Datenschutzerklaerung_ASV_blaugelb.pdf',
         size: '130 KB',
         stand: '09.08.2026',
       },
@@ -423,7 +425,7 @@ export const documentGroups = [
       {
         title: 'Nutzungsordnung Freibad',
         text: 'Regeln für die Nutzung des Sportbeckens außerhalb der Öffnungszeiten, samt Selbstverantwortungs- und Belehrungserklärung. Nur für volljährige ordentliche Mitglieder mit Saisonkarte.',
-        file: '/assets/dokumente/20260809_Nutzungsordnung_Freibad_Mitglieder_Offenhausen_ab18.pdf',
+        file: 'assets/dokumente/20260809_Nutzungsordnung_Freibad_Mitglieder_Offenhausen_ab18.pdf',
         size: '155 KB',
         stand: '09.08.2026',
       },
