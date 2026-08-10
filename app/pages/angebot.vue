@@ -215,7 +215,7 @@ const swimSlots = computed(() =>
       <p class="font-bold text-blau-950">Interesse geweckt?</p>
       <p class="mt-1 leading-relaxed text-slate-700">
         Alle aktuellen Termine und kurzfristigen Änderungen geben wir in unserer
-        WhatsApp-Gruppe bekannt. Als Mitglied bist du automatisch dabei –
+        WhatsApp-Gruppe bekannt. Als Mitglied kannst du jederzeit dazukommen –
         <NuxtLink
           to="/mitgliedschaft"
           class="font-semibold text-blau-700 underline"

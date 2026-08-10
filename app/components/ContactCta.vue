@@ -52,7 +52,8 @@ const mailto = computed(
       </div>
       <p class="text-sm text-blau-200">
         Aktuelle Termine und kurzfristige Änderungen laufen über unsere
-        WhatsApp-Gruppe – als Mitglied bist du automatisch dabei.
+        WhatsApp-Gruppe – als Mitglied kannst du jederzeit dazukommen, sag uns
+        einfach Bescheid.
       </p>
     </div>
   </section>

@@ -51,7 +51,7 @@ const socials = computed(() =>
         <p class="mt-2 text-sm leading-relaxed text-slate-600">
           Die laufende Kommunikation im Verein – Trainingstermine, kurzfristige
           Änderungen, Absprachen – läuft über unsere WhatsApp-Gruppe. Als
-          Mitglied bist du automatisch dabei, die Teilnahme ist freiwillig.
+          Mitglied kannst du jederzeit dazukommen, die Teilnahme ist freiwillig.
         </p>
         <template v-if="contact.whatsapp">
           <a
