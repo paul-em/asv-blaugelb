@@ -130,10 +130,13 @@ dort ausdrücklich für die Website freigegeben:
 
 | Bank | IBAN |
 | --- | --- |
-| Sparkasse Lambach | AT95 2031 7077 0108 4571 |
+| Raiffeisenbank Eberschwang | AT70 3408 1000 0005 1565 |
 
-Das zweite Konto bei der **Raiffeisenbank Eberschwang** wird aufgelöst und
-wurde am 10.08.2026 auf Vereinsangabe hin von der Website entfernt.
+Auf Vereinsangabe vom 10.08.2026 läuft der Mitgliedsbeitrag über das Konto bei
+der **Raiffeisenbank Eberschwang**. Das zuvor angeführte Konto bei der
+**Sparkasse Lambach** (AT95 2031 7077 0108 4571) steht seither nicht mehr auf
+der Website. Die frühere Angabe, das Eberschwang-Konto werde aufgelöst, ist
+damit überholt.
 
 Der BIC wird bewusst weggelassen – innerhalb des SEPA-Raums genügt die IBAN.
 Verwendungszweck laut Website: „Mitgliedsbeitrag + Vor- und Nachname".

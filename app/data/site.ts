@@ -350,11 +350,12 @@ export const feeNote =
   BIC ist bewusst nicht angeführt – für Überweisungen innerhalb des SEPA-Raums
   genügt die IBAN.
 
-  Das zweite Konto (Raiffeisenbank Eberschwang) wird aufgelöst und ist deshalb
-  nicht mehr auf der Seite angeführt.
+  Auf Vereinsangabe vom 10.08.2026 wird der Mitgliedsbeitrag über das Konto bei
+  der Raiffeisenbank Eberschwang eingehoben; das Konto bei der Sparkasse Lambach
+  ist deshalb nicht mehr auf der Seite angeführt.
 */
 export const bankAccounts = [
-  { bank: 'Sparkasse Lambach', iban: 'AT95 2031 7077 0108 4571' },
+  { bank: 'Raiffeisenbank Eberschwang', iban: 'AT70 3408 1000 0005 1565' },
 ]
 
 export const paymentReference = 'Mitgliedsbeitrag + Vor- und Nachname'

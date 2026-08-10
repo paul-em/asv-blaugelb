@@ -27,8 +27,8 @@ muss. Belegte Daten stehen in [vereinsdaten.md](vereinsdaten.md),
       Familienstaffel und Kinder-Gratismitgliedschaft entfallen (Entscheidung
       E2, 10.08.2026).
 - [x] **Bankverbindung** für den Mitgliedsbeitrag steht auf `/mitgliedschaft`
-      (Sparkasse Lambach). Das Konto bei der Raiffeisenbank Eberschwang wird
-      aufgelöst und ist seit 10.08.2026 nicht mehr angeführt.
+      (Raiffeisenbank Eberschwang, auf Vereinsangabe vom 10.08.2026). Das Konto
+      bei der Sparkasse Lambach ist seither nicht mehr angeführt.
 - [x] **WhatsApp-Kontakt**: `https://wa.me/436502114679` – die Nachrichten
       gehen an Obmann Martin Muckenhuber (bestätigt 10.08.2026). Die Nummer ist
       im Link sichtbar; sie steht bewusst nur als WhatsApp-Kontakt auf der
