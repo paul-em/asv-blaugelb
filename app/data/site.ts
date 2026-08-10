@@ -223,6 +223,7 @@ export const freibad = {
     'Mindestalter 18 Jahre',
     'Unterfertigte Selbstverantwortungs- und Belehrungserklärung',
     'Freischaltung des Zutritts durch die Marktgemeinde',
+    'Die erweiterte Nutzung ist persönlich; die Mitnahme nicht zutrittsberechtigter Personen – auch eigener Kinder – ist nicht zulässig',
   ],
   rules: [
     'Es ist keine Badeaufsicht anwesend – die Nutzung erfolgt auf eigenes Risiko.',
