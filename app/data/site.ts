@@ -362,8 +362,9 @@ export const paymentReference = 'Mitgliedsbeitrag + Vor- und Nachname'
   Beitrittserklärung als Online-Formular (Microsoft Forms).
   TODO: Link eintragen, sobald das Formular fertig ist.
 
-  Solange `url` leer ist, weist die Seite auf den formlosen Beitritt per E-Mail
-  hin (Statuten § 5). Sobald ein Link hinterlegt ist, erscheinen zusätzlich der
+  Solange `url` leer ist, verweist die Seite auf die Beitrittserklärung zum
+  Download unter /dokumente (Statuten § 5 Abs. 1). Sobald ein Link hinterlegt
+  ist, erscheinen zusätzlich der
   Hinweis auf Microsoft als Anbieter und der entsprechende Absatz in der
   Datenschutzerklärung.
 */
@@ -372,6 +373,32 @@ export const membershipForm = {
   label: 'Beitrittserklärung ausfüllen',
   provider: 'Microsoft Forms',
 }
+
+/*
+  Dokumente zum Download unter /dokumente.
+
+  `file` ist der Pfad im Ordner `public/`. Solange das Feld leer ist, erscheint
+  der Eintrag ohne Download-Link mit dem Hinweis "folgt in Kürze" – so entstehen
+  keine toten Links, sobald ein Dokument noch nicht abgelegt ist.
+  TODO: PDFs in `public/dokumente/` ablegen und die Pfade hier eintragen.
+*/
+export const documents = [
+  {
+    title: 'Beitrittserklärung',
+    text: 'Aufnahmeantrag mit SEPA-Mandat, Foto-Einwilligung und WhatsApp-Opt-in. Ausgefüllt und unterschrieben per E-Mail oder beim Training zurückgeben.',
+    file: '',
+  },
+  {
+    title: 'Datenschutzerklärung des Vereins',
+    text: 'Information nach Art. 13 DSGVO – welche Daten der Verein verarbeitet und welche Rechte du hast. Du bekommst sie zusammen mit der Beitrittserklärung.',
+    file: '',
+  },
+  {
+    title: 'Nutzungsordnung Freibad',
+    text: 'Regelt den Zugang zum Sportbecken außerhalb der Öffnungszeiten – Voraussetzungen, Verhalten im Becken und Notfallkette.',
+    file: '',
+  },
+]
 
 // Mitgliedschaft nach den Statuten (Fassung 03.12.2017)
 export const membership = {
@@ -389,7 +416,7 @@ export const membership = {
       text: 'Werden von der Generalversammlung wegen besonderer Verdienste um den Verein ernannt.',
     },
   ],
-  join: 'Ein formloser Antrag beim Vorstand genügt – per E-Mail, mündlich oder schriftlich. Über die Aufnahme entscheidet der Vorstand.',
+  join: 'Der Aufnahmeantrag wird beim Vorstand eingereicht; dafür gibt es die Beitrittserklärung. Über die Aufnahme entscheidet der Vorstand.',
   leave:
     'Der Austritt ist jederzeit ohne Angabe von Gründen möglich – schriftlich per Post oder E-Mail an den Vorstand. Langt die Erklärung bis zum 31. März ein, endet die Mitgliedschaft sofort und ein noch nicht bezahlter Beitrag entfällt. Danach endet sie mit 31. Dezember des laufenden Jahres; der Beitrag für dieses Jahr bleibt geschuldet. Bereits bezahlte Beiträge werden nicht rückerstattet.',
   benefits: [

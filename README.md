@@ -80,9 +80,9 @@ Mitgliedschaft. Feld leeren blendet sie überall aus, dann bleibt E-Mail der
 einzige verlinkte Kanal.
 
 **Beitrittserklärung:** Link zum Microsoft Form in `membershipForm.url`
-eintragen – dann führt `/mitgliedschaft` dorthin (statt zum Hinweis auf den
-formlosen Beitritt per E-Mail) und die Datenschutzerklärung ergänzt automatisch
-den Absatz zur Verarbeitung durch Microsoft.
+eintragen – dann führt `/mitgliedschaft` dorthin (statt zum Download der
+Beitrittserklärung unter `/dokumente`) und die Datenschutzerklärung ergänzt
+automatisch den Absatz zur Verarbeitung durch Microsoft.
 
 **Freibad-Angebot:** Die Vereinbarung mit der Marktgemeinde ist in Kraft,
 `freibad.aktiv` in `app/data/site.ts` steht auf `true`. Über dieses Flag lässt

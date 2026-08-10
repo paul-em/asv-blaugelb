@@ -12,8 +12,9 @@ import {
 
 useHead({ title: `Mitgliedschaft – ${club.name}` })
 
-// Der Beitritt ist laut Statuten § 5 formlos möglich. Sobald die
-// Beitrittserklärung als Online-Formular vorliegt, führt der Ablauf dorthin.
+// Der Aufnahmeantrag läuft laut Statuten § 5 Abs. 1 über die Beitrittserklärung
+// (Download unter /dokumente). Sobald sie zusätzlich als Online-Formular
+// vorliegt, führt der Ablauf dorthin.
 const hasForm = computed(() => Boolean(membershipForm.url))
 
 const steps = computed(() =>
@@ -34,12 +35,12 @@ const steps = computed(() =>
       ]
     : [
         {
-          title: 'Bei uns melden',
-          text: 'Ein formloser Antrag genügt – per E-Mail, mündlich oder schriftlich beim Vorstand.',
+          title: 'Beitrittserklärung herunterladen',
+          text: 'Das Formular findest du im Bereich Dokumente. Es enthält alle Angaben, die wir für die Mitgliederverwaltung brauchen.',
         },
         {
-          title: 'Antrag übermitteln',
-          text: `Per E-Mail an ${contact.email} oder persönlich beim Training abgeben.`,
+          title: 'Ausfüllen und zurückgeben',
+          text: `Unterschrieben per E-Mail an ${contact.email} oder persönlich beim Training.`,
         },
         {
           title: 'Aufnahme durch den Vorstand',
@@ -140,19 +141,20 @@ const steps = computed(() =>
         </p>
       </template>
       <template v-else>
-        <p class="font-bold text-blau-950">Anmeldung ohne Formular</p>
+        <p class="font-bold text-blau-950">So meldest du dich an</p>
         <p class="mt-1 leading-relaxed text-slate-700">
-          Ein eigenes Beitrittsformular brauchst du nicht: Laut Statuten genügt
-          ein formloser Antrag beim Vorstand. Schreib uns einfach eine E-Mail mit
-          deinem Namen, deiner Adresse und deinem Geburtsdatum.
+          Für den Beitritt gibt es ein Formular – die Beitrittserklärung. Du
+          kannst sie im Bereich Dokumente herunterladen, ausfüllen und uns
+          unterschrieben per E-Mail oder beim Training zurückgeben. Die
+          Datenschutzerklärung des Vereins bekommst du gleich dazu.
         </p>
-        <a
-          :href="`mailto:${contact.email}?subject=${encodeURIComponent('Beitritt blaugelb Offenhausen')}`"
+        <NuxtLink
+          to="/dokumente"
           class="mt-4 inline-flex items-center gap-2 rounded-xl bg-blau-900 px-5 py-3 font-bold text-white transition hover:bg-blau-800"
         >
-          <AppIcon name="mail" class="h-5 w-5 text-gelb-400" />
-          Jetzt anmelden
-        </a>
+          <AppIcon name="arrow" class="h-5 w-5 text-gelb-400" />
+          Zur Beitrittserklärung
+        </NuxtLink>
       </template>
     </div>
 

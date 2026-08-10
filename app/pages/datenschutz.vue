@@ -101,8 +101,9 @@ const stand = 'August 2026'
         >.
       </p>
       <p class="mt-2 leading-relaxed">
-        Wer das Online-Formular nicht nutzen möchte, kann den Beitritt formlos
-        per E-Mail oder schriftlich beim Vorstand erklären.
+        Wer das Online-Formular nicht nutzen möchte, kann die Beitrittserklärung
+        als Dokument ausfüllen und per E-Mail oder schriftlich beim Vorstand
+        einreichen.
       </p>
     </template>
 

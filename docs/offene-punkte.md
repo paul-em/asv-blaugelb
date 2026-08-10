@@ -40,8 +40,8 @@ muss. Belegte Daten stehen in [vereinsdaten.md](vereinsdaten.md),
       `membershipForm.url` (`app/data/site.ts`) eintragen. Dann führt der
       Beitritts-Ablauf auf `/mitgliedschaft` zum Online-Formular, und in der
       Datenschutzerklärung erscheint automatisch der Absatz zur Verarbeitung
-      durch Microsoft. Solange das Feld leer ist, weist die Seite auf den
-      formlosen Beitritt per E-Mail hin (Statuten § 5).
+      durch Microsoft. Solange das Feld leer ist, verweist die Seite auf die
+      Beitrittserklärung zum Download unter `/dokumente` (Statuten § 5 Abs. 1).
       Zu klären: **Auftragsverarbeitervertrag** mit Microsoft bzw. welches
       Konto das Formular hostet, und welche Felder das Formular abfragt
       (Datenminimierung) – das Formular braucht eine eigene

@@ -34,6 +34,9 @@ const socials = computed(() =>
             }}</NuxtLink>
           </li>
           <li>
+            <NuxtLink to="/dokumente" class="hover:text-white">Dokumente</NuxtLink>
+          </li>
+          <li>
             <NuxtLink to="/impressum" class="hover:text-white">Impressum</NuxtLink>
           </li>
           <li>

@@ -88,9 +88,13 @@ das aktuelle Dokument bestätigt.
 außerordentliche Mitglieder (Förderung durch erhöhten Beitrag), Ehrenmitglieder
 (Ernennung durch die Generalversammlung wegen besonderer Verdienste).
 
-**Beitritt** (§ 5): Antrag beim Vorstand – **per E-Mail, mündlich oder
-schriftlich**. Der Vorstand entscheidet und kann die Aufnahme ohne Angabe von
-Gründen verweigern.
+**Beitritt** (§ 5 Abs. 1, neue Statuten): Aufnahmeantrag beim Vorstand über die
+**Beitrittserklärung**; der mündliche Antrag der Fassung 2017 entfällt. Der
+Vorstand ist ausdrücklich ermächtigt, ein Beitrittsformular vorzusehen. Er
+entscheidet über die Aufnahme und kann sie ohne Angabe von Gründen verweigern.
+
+Die Beitrittserklärung enthält SEPA-Mandat, Foto-Einwilligung und
+WhatsApp-Opt-in – alles drei ist formlos nicht wirksam einzuholen.
 
 **Austritt** (§ 6 Abs. 2, neue Statuten): **jederzeit** ohne Angabe von Gründen,
 schriftlich per Post oder E-Mail an den Vorstand. Langt die Erklärung **bis
