@@ -208,6 +208,14 @@ const steps = computed(() =>
     <p class="mt-3 text-slate-600">
       Die Statuten kennen drei Formen der Mitgliedschaft:
     </p>
+    <p class="mt-3 text-sm text-slate-600">
+      Die Vereinsordnungen gelten in ihrer jeweils gültigen Fassung und stehen
+      im Bereich
+      <NuxtLink to="/dokumente" class="font-semibold text-blau-700 underline"
+        >Dokumente</NuxtLink
+      >
+      zum Nachlesen bereit.
+    </p>
     <div class="mt-6 grid gap-6 md:grid-cols-3">
       <div
         v-for="t in membership.types"

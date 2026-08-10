@@ -72,6 +72,7 @@ export const nav = [
   { label: 'Verein', to: '/verein' },
   { label: 'Angebot', to: '/angebot' },
   { label: 'Mitgliedschaft', to: '/mitgliedschaft' },
+  { label: 'Dokumente', to: '/dokumente' },
   { label: 'Kontakt', to: '/kontakt' },
 ]
 
@@ -375,28 +376,52 @@ export const membershipForm = {
 }
 
 /*
-  Dokumente zum Download unter /dokumente.
+  Dokumente zum Download unter /dokumente, gruppiert nach Anlass.
 
-  `file` ist der Pfad im Ordner `public/`. Solange das Feld leer ist, erscheint
-  der Eintrag ohne Download-Link mit dem Hinweis "folgt in Kürze" – so entstehen
-  keine toten Links, sobald ein Dokument noch nicht abgelegt ist.
-  TODO: PDFs in `public/dokumente/` ablegen und die Pfade hier eintragen.
+  `file` ist der Pfad im Ordner `public/`, `size` die Dateigröße zur Anzeige
+  neben dem Link. Solange `file` leer ist, erscheint der Eintrag ohne
+  Download-Link mit dem Hinweis "folgt in Kürze" – so entstehen keine toten
+  Links, wenn ein Dokument noch nicht abgelegt ist.
+
+  Neue Fassungen mit neuem Datumspräfix ablegen (Dateinamen ohne Umlaute) und
+  `file`, `size` und `stand` hier gemeinsam aktualisieren.
+
+  TODO: Statuten erst nach Beschluss und Behördenanzeige ergänzen – in der
+  beschlossenen Reinfassung, ohne Änderungsmarkierungen und ohne den Abschnitt
+  "Hinweis zu den Änderungen". Der vorbereitete Block steht in
+  app/pages/dokumente.vue auskommentiert.
 */
-export const documents = [
+export const documentGroups = [
   {
-    title: 'Beitrittserklärung',
-    text: 'Aufnahmeantrag mit SEPA-Mandat, Foto-Einwilligung und WhatsApp-Opt-in. Ausgefüllt und unterschrieben per E-Mail oder beim Training zurückgeben.',
-    file: '',
+    title: 'Für den Beitritt',
+    items: [
+      {
+        title: 'Beitrittserklärung',
+        text: 'Das Formular für die Aufnahme in den Verein – mit Mitgliedsdaten, SEPA-Mandat und den freiwilligen Einwilligungen für Foto- und Videoaufnahmen sowie die WhatsApp-Gruppe.',
+        file: '/assets/dokumente/20260809_Beitrittserklaerung_ASV_blaugelb.pdf',
+        size: '110 KB',
+        stand: '09.08.2026',
+      },
+      {
+        title: 'Datenschutzerklärung des Vereins',
+        text: 'Wie wir mit den Daten unserer Mitglieder umgehen. Ergänzt die Datenschutzerklärung für diese Website.',
+        file: '/assets/dokumente/20260809_Datenschutzerklaerung_ASV_blaugelb.pdf',
+        size: '130 KB',
+        stand: '09.08.2026',
+      },
+    ],
   },
   {
-    title: 'Datenschutzerklärung des Vereins',
-    text: 'Information nach Art. 13 DSGVO – welche Daten der Verein verarbeitet und welche Rechte du hast. Du bekommst sie zusammen mit der Beitrittserklärung.',
-    file: '',
-  },
-  {
-    title: 'Nutzungsordnung Freibad',
-    text: 'Regelt den Zugang zum Sportbecken außerhalb der Öffnungszeiten – Voraussetzungen, Verhalten im Becken und Notfallkette.',
-    file: '',
+    title: 'Für die Freibadnutzung',
+    items: [
+      {
+        title: 'Nutzungsordnung Freibad',
+        text: 'Regeln für die Nutzung des Sportbeckens außerhalb der Öffnungszeiten, samt Selbstverantwortungs- und Belehrungserklärung. Nur für volljährige ordentliche Mitglieder mit Saisonkarte.',
+        file: '/assets/dokumente/20260809_Nutzungsordnung_Freibad_Mitglieder_Offenhausen_ab18.pdf',
+        size: '155 KB',
+        stand: '09.08.2026',
+      },
+    ],
   },
 ]
 

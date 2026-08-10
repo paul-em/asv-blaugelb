@@ -183,6 +183,15 @@ const swimSlots = computed(() =>
                 {{ freibad.emergency }}
               </p>
             </div>
+
+            <p class="mt-6 text-sm leading-relaxed text-slate-600">
+              Alle Regeln im Detail stehen in der Nutzungsordnung Freibad – samt
+              Selbstverantwortungs- und Belehrungserklärung. Sie steht im Bereich
+              <NuxtLink to="/dokumente" class="font-semibold text-blau-700 underline"
+                >Dokumente</NuxtLink
+              >
+              zum Download bereit.
+            </p>
           </template>
 
           <!-- Anlassbezogen: konkrete Termine, sobald welche feststehen -->
