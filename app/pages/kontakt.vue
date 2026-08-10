@@ -4,7 +4,7 @@ import { club, contact, seasons, social } from '~/data/site'
 useHead({ title: `Kontakt – ${club.name}` })
 
 const mapQuery = encodeURIComponent(
-  `${contact.street} ${contact.zip} ${contact.city}`.trim(),
+  (contact.mapQuery || `${contact.street} ${contact.zip} ${contact.city}`).trim(),
 )
 const socials = computed(() =>
   Object.entries(social).filter(([key, val]) => key !== 'website' && val),

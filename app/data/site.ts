@@ -43,6 +43,11 @@ export const contact = {
   zip: '4625',
   city: 'Offenhausen',
   country: 'Österreich',
+  // Suchbegriff für den Kartenlink auf /kontakt. OpenStreetMap findet
+  // "Bachstätten 4" nur unter Pennewang, nicht unter Offenhausen – die
+  // angezeigte Anschrift bleibt davon unberührt. Leer lassen, um stattdessen
+  // Straße, PLZ und Ort zu verwenden.
+  mapQuery: 'Bachstätten 4 4625 Pennewang',
   email: 'blaugelb@outlook.com',
   // TODO: Vereinstelefonnummer. Bekannt ist nur eine Privat-Mobilnummer
   // aus der Ausschreibung 2017 – bewusst nicht übernommen.
