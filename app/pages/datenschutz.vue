@@ -117,9 +117,8 @@ const stand = 'August 2026'
       verwaltet und freischaltet.
     </p>
     <p class="mt-2 leading-relaxed">
-      <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO (Erfüllung
-      der Nutzungsordnung Freibad) bzw. Art. 6 Abs. 1 lit. a DSGVO (Einwilligung
-      durch die freiwillige Anmeldung zur Freibadnutzung).
+      <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO
+      (Mitgliedschaftsverhältnis).
     </p>
 
     <h3 class="mt-6 font-bold text-slate-900">3.4 Kommunikation über WhatsApp</h3>
