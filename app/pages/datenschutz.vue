@@ -4,7 +4,7 @@ import { club, contact, membershipForm } from '~/data/site'
 useHead({ title: `Datenschutzerklärung – ${club.name}` })
 
 // Stand der Erklärung – bei inhaltlichen Änderungen mitpflegen.
-const stand = 'August 2026'
+const stand = '09.08.2026'
 </script>
 
 <template>
@@ -14,7 +14,18 @@ const stand = 'August 2026'
   />
 
   <section class="mx-auto max-w-3xl px-4 py-16 text-slate-700">
-    <h2 class="text-xl font-extrabold text-blau-900">1. Verantwortlicher</h2>
+    <p class="leading-relaxed">
+      Diese Erklärung betrifft den Betrieb dieser Website. Für Mitglieder gilt
+      ergänzend die Datenschutzerklärung des Vereins, die im Bereich
+      <NuxtLink to="/dokumente" class="text-blau-700 hover:underline"
+        >Dokumente</NuxtLink
+      >
+      zum Download bereitsteht.
+    </p>
+
+    <h2 class="mt-10 text-xl font-extrabold text-blau-900">
+      1. Verantwortlicher
+    </h2>
     <p class="mt-2 leading-relaxed">
       {{ club.officialName }}<br />
       <template v-if="contact.street">{{ contact.street }}<br /></template>
@@ -65,11 +76,17 @@ const stand = 'August 2026'
     <h3 class="mt-6 font-bold text-slate-900">3.2 Mitgliedschaft</h3>
     <p class="mt-2 leading-relaxed">
       Für die Mitgliederverwaltung verarbeiten wir die beim Beitritt bekannt
-      gegebenen Daten (Name, Adresse, Geburtsdatum, E-Mail-Adresse, bei
-      Beitragszahlungen die Kontoverbindung). Sie werden ausschließlich für die
+      gegebenen Daten (Vor- und Nachname, Adresse, Geburtsdatum, Telefonnummer,
+      E-Mail-Adresse, bei Beitragszahlungen die Kontoverbindung) sowie die im
+      Vereinsbetrieb anfallenden Daten (Mitgliedsnummer, Funktion im Verein,
+      sportliche Leistungen und Ergebnisse). Sie werden ausschließlich für die
       Mitgliederverwaltung und die Erfüllung des Vereinszwecks verwendet – etwa
       für Einladungen zur Generalversammlung oder die Verrechnung der
       Mitgliedsbeiträge.
+    </p>
+    <p class="mt-2 leading-relaxed">
+      Die Angabe des Geschlechts ist freiwillig und dient ausschließlich der
+      Zuordnung zu Alters- und Wertungsklassen bei Wettkampfnennungen.
     </p>
     <p class="mt-2 leading-relaxed">
       <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO
@@ -112,9 +129,12 @@ const stand = 'August 2026'
     </h3>
     <p class="mt-2 leading-relaxed">
       Für den Zutritt zum Sportbecken des Freibades Offenhausen außerhalb der
-      Öffnungszeiten übermitteln wir die dafür nötigen Daten der berechtigten
-      Mitglieder an die Marktgemeinde Offenhausen, die die Zutrittsberechtigung
-      verwaltet und freischaltet.
+      Öffnungszeiten übermitteln wir Vor- und Nachname, Geburtsdatum,
+      E-Mail-Adresse, Telefonnummer und die Nummer der Saisonkarte an die
+      Marktgemeinde Offenhausen, die die Zutrittsberechtigung verwaltet und
+      freischaltet. Die Marktgemeinde betreibt das Zutrittssystem und verarbeitet
+      die dabei anfallenden Zutrittsprotokolle als eigene datenschutzrechtliche
+      Verantwortliche; dafür gilt deren Datenschutzinformation.
     </p>
     <p class="mt-2 leading-relaxed">
       <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO
@@ -158,6 +178,30 @@ const stand = 'August 2026'
       Interesse an einem sicheren und störungsfreien Betrieb der Website).
     </p>
 
+    <h3 class="mt-6 font-bold text-slate-900">3.6 Foto- und Videoaufnahmen</h3>
+    <p class="mt-2 leading-relaxed">
+      Bei Vereinsveranstaltungen entstehen Foto- und Videoaufnahmen, die wir für
+      die Öffentlichkeitsarbeit des Vereins verwenden – auf dieser Website, in
+      unseren Social-Media-Kanälen, in Presseberichten und in der Vereinschronik.
+    </p>
+    <p class="mt-2 leading-relaxed">
+      Aufnahmen, auf denen einzelne Personen erkennbar im Vordergrund stehen,
+      veröffentlichen wir nur mit gesonderter Einwilligung. Diese Einwilligung
+      ist freiwillig, für die Mitgliedschaft nicht erforderlich und kann
+      jederzeit mit Wirkung für die Zukunft widerrufen werden – eine kurze
+      E-Mail an
+      <a :href="`mailto:${contact.email}`" class="text-blau-700 hover:underline">{{
+        contact.email
+      }}</a>
+      genügt. Bereits erschienene Druckwerke bleiben unberührt,
+      Online-Veröffentlichungen entfernen wir nach Möglichkeit.
+    </p>
+    <p class="mt-2 leading-relaxed">
+      <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO (berechtigtes
+      Interesse an der Öffentlichkeitsarbeit) bzw. Art. 6 Abs. 1 lit. a DSGVO
+      (Einwilligung bei Einzelabbildungen).
+    </p>
+
     <h2 class="mt-10 text-xl font-extrabold text-blau-900">
       4. Cookies und Tracking
     </h2>
@@ -181,6 +225,56 @@ const stand = 'August 2026'
       Marktgemeinde Offenhausen für die Freibad-Zutrittsverwaltung (siehe 3.3)
       oder an Veranstalter, wenn du über den Verein bei einem Bewerb genannt
       wirst.
+    </p>
+    <p class="mt-2 leading-relaxed">Konkret sind das:</p>
+    <ul class="mt-3 space-y-2">
+      <li class="flex items-start gap-3">
+        <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-blau-700" />
+        <span
+          >die <strong>Marktgemeinde Offenhausen</strong> für die
+          Freibad-Zutrittsverwaltung (siehe 3.3)</span
+        >
+      </li>
+      <li class="flex items-start gap-3">
+        <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-blau-700" />
+        <span
+          ><strong>Sport- und Dachverbände sowie Wettkampfveranstalter</strong>
+          bei Nennungen und Ergebnislisten</span
+        >
+      </li>
+      <li class="flex items-start gap-3">
+        <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-blau-700" />
+        <span
+          ><strong>Versicherungen</strong> im Schadensfall bzw. für die
+          Sportversicherung</span
+        >
+      </li>
+      <li class="flex items-start gap-3">
+        <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-blau-700" />
+        <span
+          ><strong>Banken und Zahlungsdienstleister</strong> für den
+          Beitragseinzug</span
+        >
+      </li>
+      <li class="flex items-start gap-3">
+        <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-blau-700" />
+        <span
+          >der <strong>Betreiber des Messenger-Dienstes WhatsApp</strong> bei
+          freiwilliger Teilnahme an der Vereinsgruppe (siehe 3.4)</span
+        >
+      </li>
+      <li class="flex items-start gap-3">
+        <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-blau-700" />
+        <span><strong>Behörden</strong>, soweit gesetzlich vorgeschrieben</span>
+      </li>
+    </ul>
+    <p class="mt-3 leading-relaxed">
+      Eine Weitergabe zu Werbezwecken erfolgt nicht. Der Verein übermittelt
+      personenbezogene Daten nicht aktiv in Drittländer. Bei der Nutzung von
+      Social-Media-Kanälen, des Messenger-Dienstes (3.4) und bei
+      Bildveröffentlichungen (3.6) kann eine Verarbeitung durch die jeweiligen
+      Plattformbetreiber außerhalb der EU bzw. des EWR jedoch nicht
+      ausgeschlossen werden.
     </p>
 
     <h2 class="mt-10 text-xl font-extrabold text-blau-900">6. Deine Rechte</h2>
