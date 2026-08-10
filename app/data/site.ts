@@ -38,7 +38,7 @@ export const club = {
 
 export const contact = {
   // Vereinsanschrift, bestätigt am 09.08.2026. Der Briefkopf der
-  // Nutzungsvereinbarung nennt abweichend "Herrenstraße 44" – veraltet.
+  // Nutzungsordnung Freibad nennt abweichend "Herrenstraße 44" – veraltet.
   street: 'Bachstätten 4',
   zip: '4625',
   city: 'Offenhausen',
@@ -166,7 +166,7 @@ export const seasons: Season[] = [
       'Schwimmtraining im Sportbecken, früh vor der Öffnung und abends nach dem Badeschluss.',
     text: [
       'Gemeinsam mit der Marktgemeinde Offenhausen können unsere Mitglieder das Sportbecken des Freibades außerhalb der regulären Öffnungszeiten nutzen – in Ruhe und ohne Betrieb.',
-      'Schwimmen ist die gelenkschonendste unserer Sportarten und der ideale Ausgleich zu Turnen und Radfahren. Für den Zugang gelten die Regeln der Nutzungsvereinbarung.',
+      'Schwimmen ist die gelenkschonendste unserer Sportarten und der ideale Ausgleich zu Turnen und Radfahren. Für den Zugang gelten die Regeln der Nutzungsordnung Freibad.',
     ],
     points: [
       'Ausdauerschwimmen im Sportbecken',

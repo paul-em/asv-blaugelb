@@ -14,7 +14,7 @@ Stellen pflegen.
 | Sitz | 4625 Offenhausen | Statuten § 1 Abs. 2 |
 | Tätigkeitsbereich | ganz Österreich | Statuten § 1 Abs. 2 |
 | Vereinsanschrift | Bachstätten 4, 4625 Offenhausen | bestätigt 09.08.2026 |
-| E-Mail | blaugelb@outlook.com | Briefkopf Nutzungsvereinbarung Freibad |
+| E-Mail | blaugelb@outlook.com | Briefkopf Nutzungsordnung Freibad |
 | WhatsApp | +43 650 2114679 (Obmann Martin Muckenhuber) | bestätigt 10.08.2026 |
 | Inhaltlich verantwortlich (Website) | Franz Emathinger, Paul Emathinger | bestätigt 09.08.2026 |
 | Zweigvereine | nicht beabsichtigt | Statuten § 1 Abs. 3 |
@@ -29,7 +29,7 @@ aus Website, Logo und Metadaten entfernt.
 **Zur Adresse:** Die Vereinsanschrift ist **Bachstätten 4, 4625 Offenhausen** –
 dieselbe Adresse, an der von 2013 bis 2017 Start und Ziel der Vereinsrennen
 lagen. In den Dokumenten stehen zwei abweichende Angaben, beide werden **nicht**
-verwendet: der Briefkopf der Nutzungsvereinbarung nennt „Herrenstraße 44"
+verwendet: der Briefkopf der Nutzungsordnung Freibad nennt „Herrenstraße 44"
 (veraltet), die Vereinbarung mit der Marktgemeinde eine p.A.-Adresse des
 Schriftführers mit Türnummer (Privatanschrift, gehört nicht auf die Website).
 

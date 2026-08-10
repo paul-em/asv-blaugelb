@@ -117,7 +117,7 @@ const stand = 'August 2026'
     </p>
     <p class="mt-2 leading-relaxed">
       <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO (Erfüllung
-      der Nutzungsvereinbarung) bzw. Art. 6 Abs. 1 lit. a DSGVO (Einwilligung
+      der Nutzungsordnung Freibad) bzw. Art. 6 Abs. 1 lit. a DSGVO (Einwilligung
       durch die freiwillige Anmeldung zur Freibadnutzung).
     </p>
 
