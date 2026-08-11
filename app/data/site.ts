@@ -330,6 +330,36 @@ export const events: {
 }[] = []
 
 // Bisherige eigene Veranstaltungen (siehe docs/historie.md)
+/*
+  Rückblick auf die eigenen Rennen (2013–2017) – Abschnitt unten auf /verein.
+
+  `photos`: Bilddateien in `public/assets/rennen/`, Pfad ohne führenden
+  Schrägstrich (die baseURL wird beim Rendern davorgesetzt, siehe /dokumente).
+  Solange die Liste leer ist, bleibt die Bildergalerie ausgeblendet.
+  `alt` beschreibt das Bild für Screenreader und ist Pflicht.
+
+  TODO: Videotitel eintragen, sobald sie feststehen – derzeit stehen neutrale
+  Bezeichnungen dort.
+*/
+export const races = {
+  title: 'Rückblick: MTB, Querfeldein und Crossläufe',
+  text: [
+    'Von 2013 bis 2017 hat der Verein jedes Jahr ein eigenes Rennen auf den Wiesenrundkursen in Bachstätten ausgetragen – Mountainbike-Bewerbe, Querfeldein-Rennen und Crossläufe, vom Kinderlauf bis zum Hauptbewerb.',
+    '2016 war die Strecke Austragungsort der Landesmeisterschaft im Querfeldein-Radsport. 2017 wurde das Format zur 2-Brücken Cross Challenge weiterentwickelt, die Querfeldein-Rennen, Crosslauf und MTB-Bewerb an einem Wochenende zusammengeführt hat.',
+  ],
+  photos: [] as { file: string; alt: string }[],
+  videos: [
+    {
+      label: 'Rennvideo (1)',
+      url: 'https://www.youtube.com/watch?v=A2nffDtApDU',
+    },
+    {
+      label: 'Rennvideo (2)',
+      url: 'https://www.youtube.com/watch?v=cTDeTr45DKw',
+    },
+  ],
+}
+
 export const history = [
   {
     name: '2-Brücken Cross Challenge',

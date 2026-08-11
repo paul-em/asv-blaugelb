@@ -1,7 +1,11 @@
 <script setup lang="ts">
-import { club, board, membership, sports } from '~/data/site'
+import { club, board, history, membership, races, sports } from '~/data/site'
 
 useHead({ title: `Verein – ${club.name}` })
+
+// baseURL endet immer auf "/" – so laden die Rennfotos auch unter dem
+// Unterpfad auf GitHub Pages.
+const base = useRuntimeConfig().app.baseURL
 
 const knownBoard = computed(() => board.filter((b) => b.name))
 const openBoard = computed(() => board.filter((b) => !b.name))
@@ -117,5 +121,54 @@ const openBoard = computed(() => board.filter((b) => !b.name))
         <AppIcon name="arrow" class="h-4 w-4" />
       </NuxtLink>
     </div>
+  </section>
+
+  <!-- Rückblick auf die eigenen Rennen – bewusst zurückhaltend gehalten -->
+  <section class="mx-auto max-w-5xl px-4 py-16">
+    <h2 class="text-2xl font-extrabold text-blau-900">{{ races.title }}</h2>
+    <p
+      v-for="t in races.text"
+      :key="t"
+      class="mt-3 leading-relaxed text-slate-600"
+    >
+      {{ t }}
+    </p>
+
+    <div v-if="races.photos.length" class="mt-8 grid gap-4 sm:grid-cols-2">
+      <img
+        v-for="p in races.photos"
+        :key="p.file"
+        :src="`${base}${p.file}`"
+        :alt="p.alt"
+        loading="lazy"
+        class="h-56 w-full rounded-2xl object-cover"
+      />
+    </div>
+
+    <ul v-if="races.videos.length" class="mt-8 space-y-2">
+      <li v-for="v in races.videos" :key="v.url" class="flex items-start gap-3">
+        <AppIcon name="arrow" class="mt-1 h-4 w-4 shrink-0 text-gelb-400" />
+        <a
+          :href="v.url"
+          target="_blank"
+          rel="noopener"
+          class="font-semibold text-blau-700 underline"
+          >{{ v.label }} auf YouTube ansehen</a
+        >
+      </li>
+    </ul>
+    <p v-if="races.videos.length" class="mt-3 text-xs text-slate-500">
+      Die Videos liegen auf YouTube und werden erst durch deinen Klick geladen –
+      auf dieser Seite sind sie nicht eingebettet.
+    </p>
+
+    <ul class="mt-8 grid gap-2 text-sm text-slate-600 sm:grid-cols-2">
+      <li v-for="e in history" :key="e.name" class="flex items-start gap-3">
+        <AppIcon name="calendar" class="mt-0.5 h-4 w-4 shrink-0 text-blau-700" />
+        <span>
+          <strong class="text-slate-800">{{ e.name }}</strong> · {{ e.when }}
+        </span>
+      </li>
+    </ul>
   </section>
 </template>
