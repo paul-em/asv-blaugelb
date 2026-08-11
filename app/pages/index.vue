@@ -155,8 +155,8 @@ const einzelbeitrag = computed(
         </h2>
         <p class="mt-4 leading-relaxed text-slate-600">
           Bei blaugelb Offenhausen geht es nicht nur um Sport – Geselligkeit und
-          Zusammenhalt sind uns genauso wichtig. Ob Sporteinsteigerin oder
-          erfahrener Ausdauersportler: Du bist herzlich willkommen.
+          Zusammenhalt sind uns genauso wichtig. Ob Sporteinsteiger oder
+          erfahrene Ausdauersportlerin: Du bist herzlich willkommen.
         </p>
         <p class="mt-4 leading-relaxed text-slate-600">
           Der Beitrag ist bewusst niedrig gehalten –
