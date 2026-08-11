@@ -1,6 +1,6 @@
 # Offene Punkte vor dem Go-live
 
-Stand: 09.08.2026. Alles, was für die Website noch fehlt oder bestätigt werden
+Stand: 11.08.2026. Alles, was für die Website noch fehlt oder bestätigt werden
 muss. Belegte Daten stehen in [vereinsdaten.md](vereinsdaten.md),
 [angebot.md](angebot.md), [freibad.md](freibad.md) und
 [historie.md](historie.md).
@@ -36,28 +36,31 @@ muss. Belegte Daten stehen in [vereinsdaten.md](vereinsdaten.md),
 
 ## Inhalte, die noch fehlen
 
-- [ ] **Beitrittserklärung als Microsoft Form.** Sobald der Link feststeht, in
-      `membershipForm.url` (`app/data/site.ts`) eintragen. Dann führt der
-      Beitritts-Ablauf auf `/mitgliedschaft` zum Online-Formular. Der Absatz
-      zur Verarbeitung durch Microsoft muss dann eigens ergänzt werden – die
-      Website-Datenschutzerklärung betrifft seit 11.08.2026 nur noch den Besuch
-      der Seite. Solange das Feld leer ist, verweist die Seite auf die
-      Beitrittserklärung zum Download unter `/dokumente` (Statuten § 5 Abs. 1).
-      Zu klären: **Auftragsverarbeitervertrag** mit Microsoft bzw. welches
-      Konto das Formular hostet, und welche Felder das Formular abfragt
-      (Datenminimierung) – das Formular braucht eine eigene
-      DSGVO-Einwilligung.
-- [ ] **Gründungsjahr.** Erster Website-Beitrag stammt vom 15.10.2013, die
-      erste dokumentierte Veranstaltung ebenfalls 2013 – das Gründungsjahr
-      selbst ist damit nicht belegt.
+- [x] **Beitrittserklärung als Microsoft Form – zurückgestellt.** Microsoft
+      Forms wird derzeit nicht verwendet, es bleibt einstweilen beim
+      PDF-Formular (Vereinsangabe 11.08.2026). `membershipForm.url` bleibt
+      deshalb leer, der Beitritts-Ablauf auf `/mitgliedschaft` führt zum
+      Download unter `/dokumente` (Statuten § 5 Abs. 1).
+      Falls das Online-Formular später doch kommt, sind vorher zu klären:
+      **Auftragsverarbeitervertrag** mit Microsoft bzw. welches Konto das
+      Formular hostet, welche Felder es abfragt (Datenminimierung) und ein
+      eigener Absatz zur Verarbeitung durch Microsoft – die
+      Website-Datenschutzerklärung betrifft seit 11.08.2026 nur noch den
+      Besuch der Seite.
+- [x] **Gründungsdatum**: 8. April 2013 (Vereinsangabe 11.08.2026, bestätigt
+      nach Rückfrage – die zunächst genannte Jahreszahl 2023 war ein
+      Tippfehler). Deckt sich mit der ersten dokumentierten Veranstaltung 2013
+      und dem ersten Website-Beitrag vom 15.10.2013. Steht in `club.founded`
+      bzw. `club.foundedDate`.
 - [x] **Vorstand vollständig.** Alle sechs Funktionen sind besetzt
       (Vereinsangabe 10.08.2026), siehe [vereinsdaten.md](vereinsdaten.md).
 - [x] **Entgelt für die Zutrittsverwaltung.** Die Website nennt es als
       Voraussetzung, ohne Betrag – dafür verlinken `/angebot` und das Schaubild
       auf `/mitgliedschaft` seit 11.08.2026 die Freibadseite der Marktgemeinde
       (`freibad.url`), wo die jeweils gültigen Tarife stehen.
-- [ ] **Lauftreff.** Für Laufen gibt es derzeit keinen fixen Termin. Falls doch:
-      Tag, Uhrzeit, Treffpunkt, Ansprechperson.
+- [x] **Lauftreff.** Für Laufen gibt es derzeit keinen fixen Termin
+      (bestätigt 11.08.2026). Die Seite formuliert das entsprechend offen. Falls
+      sich das ändert: Tag, Uhrzeit, Treffpunkt, Ansprechperson nachreichen.
 - [ ] **Kommende Veranstaltungen.** Für 2026/2027 ist nichts dokumentiert. Ist
       eine Neuauflage der Cross Challenge geplant? Termine landen in `events`
       und erscheinen dann automatisch auf Startseite und `/angebot`.
@@ -93,11 +96,16 @@ muss. Belegte Daten stehen in [vereinsdaten.md](vereinsdaten.md),
 
 ## Bild- und Markenrechte
 
-- [ ] **Renn-Fotos.** Das Material auf dem alten Server ist gut, die
-      Urheberrechte sind aber ungeklärt (teils Herwig Füreder, teils Ernst
-      Teubenbacher). Vor Verwendung Freigabe einholen.
+- [x] **Von der alten Homepage wird nichts übernommen** (Entscheidung
+      11.08.2026). Damit erübrigt sich die Freigabe für das Material auf dem
+      alten Server, dessen Urheberrechte ungeklärt sind (teils Herwig Füreder,
+      teils Ernst Teubenbacher). Bilder auf der neuen Seite kommen
+      ausschließlich vom Verein selbst – derzeit die Startaufstellung im
+      Rückblick auf `/verein` (Bildnachweis „Foto: blaugelb Offenhausen").
 - [ ] **Personenfotos und Namensnennungen** brauchen das Einverständnis der
-      Abgebildeten bzw. Genannten.
+      Abgebildeten bzw. Genannten. Das bisher eingesetzte Foto ist bewusst eine
+      Übersichtsaufnahme von hinten, auf der keine Einzelperson erkennbar im
+      Vordergrund steht (Datenschutzerklärung Punkt 5).
 
 ## Technisches
 
@@ -121,5 +129,7 @@ muss. Belegte Daten stehen in [vereinsdaten.md](vereinsdaten.md),
       | `/wp-admin/*`, `/wp-login.php`, `/xmlrpc.php`, `/wp-content/*` | `/` |
 
 - [ ] **Alte Inhalte sichern**, bevor der alte Server abgedreht wird –
-      insbesondere Renn-Fotos und die Ausschreibungs-PDFs. Das Original-Logo
-      ist bereits als SVG nachgebaut.
+      insbesondere Renn-Fotos und die Ausschreibungs-PDFs. Für die neue Website
+      wird davon nichts übernommen (siehe Bild- und Markenrechte); es geht rein
+      um die Archivierung im Verein. Das Original-Logo ist bereits als SVG
+      nachgebaut.

@@ -22,6 +22,9 @@ const openBoard = computed(() => board.filter((b) => !b.name))
     <p class="mt-4 text-lg leading-relaxed text-slate-700">
       {{ club.intro }}
     </p>
+    <p v-if="club.foundedDate" class="mt-4 leading-relaxed text-slate-700">
+      Gegründet wurde der Verein am {{ club.foundedDate }}.
+    </p>
     <p class="mt-4 leading-relaxed text-slate-700">
       Von 2013 bis 2017 haben wir jedes Jahr ein eigenes Rennen auf den
       Wiesenrundkursen in Bachstätten veranstaltet – zuletzt die 2-Brücken Cross

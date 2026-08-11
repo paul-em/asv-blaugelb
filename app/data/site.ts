@@ -33,7 +33,10 @@ export const club = {
   nonprofit:
     'Der Verein ist gemeinnützig im Sinne der Bundesabgabenordnung und nicht auf Gewinn ausgerichtet. Er erfüllt seinen Zweck frei von politischen und weltanschaulichen Einflüssen.',
   scope: 'Sitz in 4625 Offenhausen, Tätigkeitsbereich ganz Österreich.',
-  founded: '', // TODO: Gründungsjahr – erste belegte Aktivität 2013
+  // Gründungstag 08.04.2013 (Vereinsangabe 11.08.2026) – passt zur ersten
+  // dokumentierten Veranstaltung und zum ersten Website-Beitrag von 2013.
+  founded: '2013',
+  foundedDate: '8. April 2013',
 }
 
 export const contact = {
