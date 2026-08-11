@@ -62,6 +62,10 @@ export const contact = {
   whatsapp: 'https://wa.me/436502114679',
   whatsappName: 'Martin Muckenhuber, Obmann',
   zvr: '904297698',
+  // Zuständige Aufsichtsbehörde nach § 5 ECG: für Vereine nach dem
+  // Vereinsgesetz 2002 die Vereinsbehörde am Vereinssitz – für 4625
+  // Offenhausen (Bezirk Wels-Land) die Bezirkshauptmannschaft Wels-Land.
+  supervisoryAuthority: 'Bezirkshauptmannschaft Wels-Land als Vereinsbehörde',
   // Vertretung nach außen laut Statuten § 13 Abs. 2.
   representative: 'Martin Muckenhuber, Obmann',
   // Verantwortlich für den Inhalt der Website.

@@ -34,6 +34,25 @@ useHead({ title: `Impressum – ${club.name}` })
     <h3 class="mt-6 font-bold text-slate-900">Vertretungsbefugtes Organ</h3>
     <p class="mt-2">{{ contact.representative }}</p>
 
+    <h3 v-if="contact.supervisoryAuthority" class="mt-6 font-bold text-slate-900">
+      Aufsichtsbehörde
+    </h3>
+    <p v-if="contact.supervisoryAuthority" class="mt-2">
+      {{ contact.supervisoryAuthority }}
+    </p>
+
+    <h3 class="mt-6 font-bold text-slate-900">Anwendbare Rechtsvorschriften</h3>
+    <p class="mt-2 leading-relaxed">
+      Vereinsgesetz 2002 (VerG), abrufbar über das
+      <a
+        href="https://www.ris.bka.gv.at"
+        target="_blank"
+        rel="noopener"
+        class="text-blau-700 hover:underline"
+        >Rechtsinformationssystem des Bundes</a
+      >.
+    </p>
+
     <h3 class="mt-6 font-bold text-slate-900">Kontakt</h3>
     <p class="mt-2">
       <template v-if="contact.email"

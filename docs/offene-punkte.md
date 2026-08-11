@@ -15,7 +15,12 @@ muss. Belegte Daten stehen in [vereinsdaten.md](vereinsdaten.md),
       keine Cookies und lädt nichts von Drittanbietern nach – geprüft am
       gebauten Output. Eigene Seite `/datenschutz`.
 - [x] **Impressum-Pflichtangaben**: ZVR 904297698, Sitz, vertretungsbefugte
-      Person (Obmann Martin Muckenhuber), Vereinszweck, Blattlinie.
+      Person (Obmann Martin Muckenhuber), Vereinszweck, Blattlinie. Seit
+      11.08.2026 zusätzlich die nach § 5 ECG verlangte **Aufsichtsbehörde**
+      (Bezirkshauptmannschaft Wels-Land als Vereinsbehörde) und die
+      anwendbaren Rechtsvorschriften (Vereinsgesetz 2002).
+      Zu bestätigen: dass die BH Wels-Land für 4625 Offenhausen tatsächlich
+      die zuständige Vereinsbehörde ist (Bezirkszuordnung).
 - [x] **Logo**: Vereinsmarke als SVG in `app/components/LogoMark.vue`
       (Varianten tile / invers / plain) und reduziert in `public/favicon.svg`.
 - [x] **Namensführung**: „ASV" entfällt, der Auftritt lautet
