@@ -134,15 +134,23 @@ const openBoard = computed(() => board.filter((b) => !b.name))
       {{ t }}
     </p>
 
-    <div v-if="races.photos.length" class="mt-8 grid gap-4 sm:grid-cols-2">
-      <img
-        v-for="p in races.photos"
-        :key="p.file"
-        :src="`${base}${p.file}`"
-        :alt="p.alt"
-        loading="lazy"
-        class="h-56 w-full rounded-2xl object-cover"
-      />
+    <div
+      v-if="races.photos.length"
+      class="mt-8 grid gap-4"
+      :class="races.photos.length > 1 ? 'sm:grid-cols-2' : ''"
+    >
+      <figure v-for="p in races.photos" :key="p.file">
+        <img
+          :src="`${base}${p.file}`"
+          :alt="p.alt"
+          loading="lazy"
+          class="w-full rounded-2xl object-cover"
+          :class="races.photos.length > 1 ? 'h-56' : 'max-h-96'"
+        />
+        <figcaption v-if="p.credit" class="mt-2 text-xs text-slate-500">
+          {{ p.credit }}
+        </figcaption>
+      </figure>
     </div>
 
     <ul v-if="races.videos.length" class="mt-8 space-y-2">
