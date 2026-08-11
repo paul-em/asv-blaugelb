@@ -12,7 +12,11 @@
     docs/historie.md       Veranstaltungen 2013–2017, alte Website
     docs/offene-punkte.md  was noch fehlt
 
-  Mit "TODO" markierte Felder sind weiterhin offen.
+  Mit "TODO" markierte Felder sind weiterhin offen. Sie stehen ausschließlich
+  in Kommentaren; die zugehörigen Daten bleiben leer und die betroffenen
+  Abschnitte blenden sich aus, solange nichts Belegtes vorliegt. `npm run
+  generate` prüft das über scripts/check-content.mjs und bricht ab, wenn ein
+  Platzhalter im gebauten HTML landet.
 */
 
 export const club = {
@@ -228,7 +232,9 @@ export const seasons: Season[] = [
 
 /*
   Laufen und Radfahren außerhalb der fixen Termine.
-  TODO: Gibt es einen regelmäßigen Lauftreff? Tag, Uhrzeit, Treffpunkt.
+  Ein regelmäßiger Lauftreff besteht derzeit nicht (Vereinsangabe 11.08.2026);
+  der Text ist deshalb bewusst offen formuliert. Falls sich das ändert: Tag,
+  Uhrzeit und Treffpunkt hier ergänzen.
 */
 export const individualSports = {
   title: 'Laufen & Radfahren abseits der fixen Termine',
@@ -245,8 +251,12 @@ export const freibad = {
   // Seite der Marktgemeinde zum Freibad – dort stehen auch die jeweils
   // gültigen Tarife (Saisonkarte, Entgelt für die Zutrittsverwaltung).
   url: 'https://www.offenhausen.at/Freibad_Offenhausen',
+  // Rückfalltext, der nur bei `aktiv: false` erscheint – etwa außerhalb der
+  // Badesaison. Er beschreibt den Stand vor Inkrafttreten der Kooperation und
+  // müsste vor einer Wiederverwendung an die dann gültige Lage angepasst
+  // werden.
   statusNote:
-    'Das Schwimmtraining im Freibad ist in Vorbereitung. Die Vereinbarung mit der Marktgemeinde und die dafür nötige Statutenänderung sind noch nicht beschlossen.',
+    'Das Schwimmtraining im Freibad ist in Vorbereitung. Sobald die Zeiten für die kommende Saison feststehen, findest du sie hier.',
   place: 'Freibad Offenhausen – Sportbecken',
   season: 'Während der von der Marktgemeinde festgesetzten Badesaison.',
   requirements: [
@@ -533,7 +543,11 @@ export const documentGroups = [
   },
 ]
 
-// Mitgliedschaft nach den Statuten (Fassung 03.12.2017)
+/*
+  Mitgliedschaft nach den Statuten. `types` folgt § 4 der Fassung 03.12.2017;
+  `join` (§ 5 Abs. 1) und `leave` (§ 6 Abs. 2) geben bereits die neue Fassung
+  wieder – siehe docs/vereinsdaten.md.
+*/
 export const membership = {
   types: [
     {

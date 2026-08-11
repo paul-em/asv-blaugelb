@@ -27,6 +27,30 @@ Das Ergebnis liegt in `.output/public/` und kann auf jedem statischen
 Webhost (oder GitHub Pages) abgelegt werden. Auf Vercel wird der Befehl
 automatisch erkannt.
 
+### Content-Validation
+
+`npm run generate` prüft den fertigen Build automatisch mit
+`scripts/check-content.mjs` und **bricht mit Fehler ab**, wenn
+
+- ein Platzhalter im sichtbaren Text steht (TODO, FIXME, Platzhalter, Lorem
+  ipsum, TBD, Dummy, Beispiel-/Mustertext, „noch zu ergänzen", „ungeklärt",
+  „unbekannt", nicht gerenderte `{{ }}`-Ausdrücke, `undefined`/`NaN`),
+- ein Verweis auf eine eigene Datei ins Leere zeigt (PDF, Bild, Textdatei) –
+  das fängt genau den Fall ab, dass Dateiname und Eintrag in `site.ts`
+  auseinanderlaufen,
+- eine Pflichtangabe fehlt (ZVR und Aufsichtsbehörde im Impressum, IBAN auf
+  `/mitgliedschaft`, Stand-Datum der Datenschutzerklärung, PDF-Links auf
+  `/dokumente`, E-Mail auf `/kontakt`),
+- eine ausgelieferte Datei 0 Byte groß ist.
+
+Einzeln aufrufbar mit `npm run check:content` (setzt einen vorhandenen Build
+voraus). Da der Deploy-Workflow `npm run generate` ausführt, verhindert ein
+Fund automatisch das Deployment.
+
+Geprüft wird der **gebaute HTML-Output**, nicht der Quelltext: In
+`app/data/site.ts` stehen offene Punkte als Kommentar, der nie auf der Seite
+landet. Verboten ist, was Besucher zu sehen bekommen.
+
 ## Inhalte pflegen
 
 Fast alle Texte, Termine, Trainingszeiten, Vorstand und Kontaktdaten stehen
