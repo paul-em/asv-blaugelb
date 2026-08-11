@@ -139,13 +139,17 @@ const openBoard = computed(() => board.filter((b) => !b.name))
       class="mt-8 grid gap-4"
       :class="races.photos.length > 1 ? 'sm:grid-cols-2' : ''"
     >
-      <figure v-for="p in races.photos" :key="p.file">
+      <figure
+        v-for="p in races.photos"
+        :key="p.file"
+        :class="races.photos.length > 1 ? '' : 'max-w-3xl'"
+      >
         <img
           :src="`${base}${p.file}`"
           :alt="p.alt"
           loading="lazy"
-          class="w-full rounded-2xl object-cover"
-          :class="races.photos.length > 1 ? 'h-56' : 'max-h-96'"
+          class="w-full rounded-2xl"
+          :class="races.photos.length > 1 ? 'h-56 object-cover' : ''"
         />
         <figcaption v-if="p.credit" class="mt-2 text-xs text-slate-500">
           {{ p.credit }}

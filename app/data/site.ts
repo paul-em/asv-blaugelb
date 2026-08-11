@@ -340,14 +340,8 @@ export const events: {
   Bildnachweis. Ein einzelnes Bild wird über die volle Breite gezeigt, ab zwei
   Bildern entsteht ein zweispaltiges Raster.
 
-  TODO: Startaufstellungs-Foto der Cross Challenge ablegen und hier eintragen:
-    {
-      file: 'assets/rennen/startaufstellung-cross-challenge.jpg',
-      alt: 'Startaufstellung beim Querfeldein-Rennen in Bachstätten – Fahrerinnen und Fahrer warten unter dem Startbanner auf den Start.',
-      credit: 'Foto: blaugelb Offenhausen',
-    }
-  Bewusst nur dieses eine Bild: eine Übersichtsaufnahme von hinten, auf der
-  keine Einzelperson erkennbar im Vordergrund steht (Datenschutzerklärung 3.6).
+  Bewusst nur ein Bild: eine Übersichtsaufnahme von hinten, auf der keine
+  Einzelperson erkennbar im Vordergrund steht (Datenschutzerklärung 3.6).
 
   `note` nennt Inhalt und Quelle des Videos und steht hinter dem Link.
 */
@@ -357,7 +351,13 @@ export const races = {
     'Von 2013 bis 2017 hat der Verein jedes Jahr ein eigenes Rennen auf den Wiesenrundkursen in Bachstätten ausgetragen – Mountainbike-Bewerbe, Querfeldein-Rennen und Crossläufe, vom Kinderlauf bis zum Hauptbewerb.',
     '2016 war die Strecke Austragungsort der Landesmeisterschaft im Querfeldein-Radsport. 2017 wurde das Format zur 2-Brücken Cross Challenge weiterentwickelt, die Querfeldein-Rennen, Crosslauf und MTB-Bewerb an einem Wochenende zusammengeführt hat.',
   ],
-  photos: [] as { file: string; alt: string; credit?: string }[],
+  photos: [
+    {
+      file: 'assets/rennen/startaufstellung-cross-challenge.jpg',
+      alt: 'Startaufstellung beim Querfeldein-Rennen in Bachstätten – Fahrerinnen und Fahrer warten mit ihren Rädern unter dem Startbanner auf den Start.',
+      credit: 'Foto: blaugelb Offenhausen',
+    },
+  ] as { file: string; alt: string; credit?: string }[],
   videos: [
     {
       label: 'Rennvideo (1)',
