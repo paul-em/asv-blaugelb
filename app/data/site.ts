@@ -338,8 +338,7 @@ export const events: {
   Solange die Liste leer ist, bleibt die Bildergalerie ausgeblendet.
   `alt` beschreibt das Bild für Screenreader und ist Pflicht.
 
-  TODO: Videotitel eintragen, sobald sie feststehen – derzeit stehen neutrale
-  Bezeichnungen dort.
+  `note` nennt Inhalt und Quelle des Videos und steht hinter dem Link.
 */
 export const races = {
   title: 'Rückblick: MTB, Querfeldein und Crossläufe',
@@ -351,10 +350,12 @@ export const races = {
   videos: [
     {
       label: 'Rennvideo (1)',
+      note: 'Querfeldein Rennen 2015 von blaugelb Offenhausen',
       url: 'https://www.youtube.com/watch?v=A2nffDtApDU',
     },
     {
       label: 'Rennvideo (2)',
+      note: 'Elite/Junioren/Master 2017 von Cyclocross Portal',
       url: 'https://www.youtube.com/watch?v=cTDeTr45DKw',
     },
   ],

@@ -148,13 +148,18 @@ const openBoard = computed(() => board.filter((b) => !b.name))
     <ul v-if="races.videos.length" class="mt-8 space-y-2">
       <li v-for="v in races.videos" :key="v.url" class="flex items-start gap-3">
         <AppIcon name="arrow" class="mt-1 h-4 w-4 shrink-0 text-gelb-400" />
-        <a
-          :href="v.url"
-          target="_blank"
-          rel="noopener"
-          class="font-semibold text-blau-700 underline"
-          >{{ v.label }} auf YouTube ansehen</a
-        >
+        <span>
+          <a
+            :href="v.url"
+            target="_blank"
+            rel="noopener"
+            class="font-semibold text-blau-700 underline"
+            >{{ v.label }} auf YouTube ansehen</a
+          >
+          <span v-if="v.note" class="text-sm text-slate-600">
+            – {{ v.note }}</span
+          >
+        </span>
       </li>
     </ul>
     <p v-if="races.videos.length" class="mt-3 text-xs text-slate-500">
