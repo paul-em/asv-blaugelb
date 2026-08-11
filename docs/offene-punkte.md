@@ -38,9 +38,10 @@ muss. Belegte Daten stehen in [vereinsdaten.md](vereinsdaten.md),
 
 - [ ] **Beitrittserklärung als Microsoft Form.** Sobald der Link feststeht, in
       `membershipForm.url` (`app/data/site.ts`) eintragen. Dann führt der
-      Beitritts-Ablauf auf `/mitgliedschaft` zum Online-Formular, und in der
-      Datenschutzerklärung erscheint automatisch der Absatz zur Verarbeitung
-      durch Microsoft. Solange das Feld leer ist, verweist die Seite auf die
+      Beitritts-Ablauf auf `/mitgliedschaft` zum Online-Formular. Der Absatz
+      zur Verarbeitung durch Microsoft muss dann eigens ergänzt werden – die
+      Website-Datenschutzerklärung betrifft seit 11.08.2026 nur noch den Besuch
+      der Seite. Solange das Feld leer ist, verweist die Seite auf die
       Beitrittserklärung zum Download unter `/dokumente` (Statuten § 5 Abs. 1).
       Zu klären: **Auftragsverarbeitervertrag** mit Microsoft bzw. welches
       Konto das Formular hostet, und welche Felder das Formular abfragt
@@ -67,13 +68,16 @@ muss. Belegte Daten stehen in [vereinsdaten.md](vereinsdaten.md),
 
 ## Rechtliches
 
-- [ ] **Datenschutzerklärung prüfen lassen.** `/datenschutz` ist als Vorlage
-      formuliert und deckt E-Mail-Kontakt, Mitgliederverwaltung,
-      Freibad-Zutrittsdaten, WhatsApp und Server-Logs ab. Vor dem Go-live von
-      einer rechtskundigen Person freigeben lassen.
-- [ ] **Hosting-Anbieter benennen**, sobald das Deployment feststeht – der
-      Abschnitt zu den Server-Logdaten spricht derzeit allgemein vom
-      „Hosting-Anbieter".
+- [ ] **Datenschutzerklärung prüfen lassen.** `/datenschutz` betrifft seit
+      11.08.2026 nur noch den Besuch der Website (Server-Logs, E-Mail-Kontakt,
+      Foto- und Videoaufnahmen). Mitgliederverwaltung, Beiträge,
+      Freibad-Zutrittsdaten, WhatsApp und Wettkampfnennungen stehen in der
+      Datenschutzerklärung des Vereins, die unter `/dokumente` zum Download
+      bereitsteht. Vor dem Go-live von einer rechtskundigen Person freigeben
+      lassen – beide Dokumente gemeinsam, damit sie deckungsgleich bleiben.
+- [x] **Hosting-Anbieter benennen**: Der Abschnitt zu den Server-Logdaten nennt
+      seit 11.08.2026 GitHub Pages (GitHub Inc., USA) samt Hinweis auf mögliche
+      Übermittlung in die USA.
 
 ## Vereinsintern (kein Website-Blocker)
 

@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import { club, contact, membershipForm } from '~/data/site'
+import { club, contact } from '~/data/site'
 
 useHead({ title: `Datenschutzerklärung – ${club.name}` })
 
 // Stand der Erklärung – bei inhaltlichen Änderungen mitpflegen.
-const stand = '09.08.2026'
+const stand = '11.08.2026'
 </script>
 
 <template>
@@ -15,23 +15,24 @@ const stand = '09.08.2026'
 
   <section class="mx-auto max-w-3xl px-4 py-16 text-slate-700">
     <p class="leading-relaxed">
-      Diese Erklärung betrifft den Betrieb dieser Website. Für Mitglieder gilt
-      ergänzend die Datenschutzerklärung des Vereins, die im Bereich
+      Diese Erklärung betrifft den Besuch dieser Website. Für Mitglieder gilt die
+      Datenschutzerklärung des Vereins – sie regelt Mitgliederverwaltung,
+      Beiträge, Freibadnutzung, WhatsApp-Gruppe und Wettkampfnennungen und steht
+      im Bereich
       <NuxtLink to="/dokumente" class="text-blau-700 hover:underline"
         >Dokumente</NuxtLink
       >
-      zum Download bereitsteht.
+      zum Download.
     </p>
 
     <h2 class="mt-10 text-xl font-extrabold text-blau-900">
       1. Verantwortlicher
     </h2>
     <p class="mt-2 leading-relaxed">
-      {{ club.officialName }}<br />
-      <template v-if="contact.street">{{ contact.street }}<br /></template>
-      {{ contact.zip }} {{ contact.city }}, {{ contact.country }}<br />
-      ZVR-Zahl: {{ contact.zvr }}<br />
-      E-Mail:
+      {{ club.officialName
+      }}<template v-if="contact.street">, {{ contact.street }}</template
+      >, {{ contact.zip }} {{ contact.city }}, {{ contact.country }} · ZVR-Zahl
+      {{ contact.zvr }} ·
       <a :href="`mailto:${contact.email}`" class="text-blau-700 hover:underline">{{
         contact.email
       }}</a>
@@ -41,307 +42,101 @@ const stand = '09.08.2026'
     </p>
 
     <h2 class="mt-10 text-xl font-extrabold text-blau-900">
-      2. Allgemeines zur Datenverarbeitung
+      2. Diese Website ist statisch
     </h2>
     <p class="mt-2 leading-relaxed">
-      Der Schutz deiner personenbezogenen Daten ist uns wichtig. Wir verarbeiten
-      personenbezogene Daten ausschließlich im Rahmen der
-      Datenschutz-Grundverordnung (DSGVO) und des österreichischen
-      Datenschutzgesetzes (DSG).
+      Keine Datenbank, keine Anmeldung, keine Formulare, keine Cookies, keine
+      Analyse- oder Tracking-Werkzeuge. Es werden auch keine Schriften, Karten
+      oder Videos von Drittanbietern nachgeladen – die Seite verwendet
+      ausschließlich die auf deinem Gerät vorhandenen Systemschriften. Ein
+      Cookie-Banner ist deshalb nicht erforderlich. Die Links zu OpenStreetMap
+      und WhatsApp führen bewusst erst nach deinem Klick zum jeweiligen Anbieter.
     </p>
     <p class="mt-2 leading-relaxed">
-      Diese Website ist eine rein statische Seite ohne Datenbank, ohne
-      Anmeldung, ohne Formulare und ohne Analyse-Werkzeuge. Durch den bloßen
-      Besuch werden vom Verein <strong>keine personenbezogenen Daten</strong>
-      erhoben oder gespeichert.
+      Durch den bloßen Besuch erhebt der Verein selbst
+      <strong>keine personenbezogenen Daten</strong>.
     </p>
 
     <h2 class="mt-10 text-xl font-extrabold text-blau-900">
-      3. Welche Daten wir verarbeiten und warum
+      3. Server-Logdaten
     </h2>
-
-    <h3 class="mt-6 font-bold text-slate-900">3.1 Kontaktaufnahme per E-Mail</h3>
     <p class="mt-2 leading-relaxed">
-      Wenn du uns eine E-Mail schreibst, verarbeiten wir die von dir
-      mitgeteilten Daten (Name, E-Mail-Adresse, Inhalt der Nachricht), um deine
-      Anfrage zu beantworten. Ohne deine Einwilligung geben wir diese Daten
-      nicht an Dritte weiter.
+      Die Seite wird über GitHub Pages (GitHub Inc., USA) bereitgestellt. Beim
+      Aufruf verarbeitet der Anbieter technische Verbindungsdaten – IP-Adresse,
+      Zeitpunkt, aufgerufene Seite, Browsertyp – in Server-Logfiles; dabei können
+      Daten in die USA übermittelt werden. Der Verein hat auf diese Logfiles
+      keinen auswertbaren Zugriff und verknüpft sie nicht mit anderen Daten.
+    </p>
+    <p class="mt-2 leading-relaxed">
+      <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO (sicherer und
+      störungsfreier Betrieb). <strong>Speicherdauer:</strong> nach den Fristen
+      des Anbieters.
+    </p>
+
+    <h2 class="mt-10 text-xl font-extrabold text-blau-900">
+      4. Kontakt per E-Mail
+    </h2>
+    <p class="mt-2 leading-relaxed">
+      Wenn du uns schreibst, verarbeiten wir Name, E-Mail-Adresse und Inhalt der
+      Nachricht, um deine Anfrage zu beantworten. Eine Weitergabe an Dritte
+      erfolgt nicht.
     </p>
     <p class="mt-2 leading-relaxed">
       <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO
-      (Vertragsanbahnung) bzw. Art. 6 Abs. 1 lit. f DSGVO (berechtigtes
-      Interesse an der Beantwortung von Anfragen).
+      (Vertragsanbahnung) bzw. lit. f (Beantwortung von Anfragen).
+      <strong>Speicherdauer:</strong> bis die Anfrage erledigt ist, darüber
+      hinaus nur im Rahmen gesetzlicher Aufbewahrungsfristen.
     </p>
 
-    <h3 class="mt-6 font-bold text-slate-900">3.2 Mitgliedschaft</h3>
-    <p class="mt-2 leading-relaxed">
-      Für die Mitgliederverwaltung verarbeiten wir die beim Beitritt bekannt
-      gegebenen Daten (Vor- und Nachname, Adresse, Geburtsdatum, Telefonnummer,
-      E-Mail-Adresse, bei Beitragszahlungen die Kontoverbindung) sowie die im
-      Vereinsbetrieb anfallenden Daten (Mitgliedsnummer, Funktion im Verein,
-      sportliche Leistungen und Ergebnisse). Sie werden ausschließlich für die
-      Mitgliederverwaltung und die Erfüllung des Vereinszwecks verwendet – etwa
-      für Einladungen zur Generalversammlung oder die Verrechnung der
-      Mitgliedsbeiträge.
-    </p>
-    <p class="mt-2 leading-relaxed">
-      Die Angabe des Geschlechts ist freiwillig und dient ausschließlich der
-      Zuordnung zu Alters- und Wertungsklassen bei Wettkampfnennungen.
-    </p>
-    <p class="mt-2 leading-relaxed">
-      <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO
-      (Mitgliedschaftsverhältnis) und Art. 6 Abs. 1 lit. c DSGVO (rechtliche
-      Verpflichtungen, etwa nach dem Vereinsgesetz und den
-      Aufzeichnungspflichten).
-    </p>
-    <p class="mt-2 leading-relaxed">
-      <strong>Speicherdauer:</strong> für die Dauer der Mitgliedschaft, danach
-      im Rahmen der gesetzlichen Aufbewahrungsfristen (in der Regel sieben Jahre
-      für abgabenrechtlich relevante Unterlagen).
-    </p>
-    <template v-if="membershipForm.url">
-      <p class="mt-2 leading-relaxed">
-        Die Beitrittserklärung kann über ein Online-Formular abgegeben werden,
-        das über <strong>{{ membershipForm.provider }}</strong> (Microsoft
-        Ireland Operations Ltd.) bereitgestellt wird. Die dort eingegebenen
-        Daten werden von Microsoft im Auftrag des Vereins verarbeitet und
-        anschließend in die Mitgliederverwaltung übernommen. Das Formular liegt
-        nicht auf dieser Website – es wird erst durch deinen Klick auf den Link
-        aufgerufen. Für die Verarbeitung durch Microsoft gelten zusätzlich
-        deren
-        <a
-          href="https://privacy.microsoft.com/de-de/privacystatement"
-          target="_blank"
-          rel="noopener"
-          class="text-blau-700 hover:underline"
-          >Datenschutzbestimmungen</a
-        >.
-      </p>
-      <p class="mt-2 leading-relaxed">
-        Wer das Online-Formular nicht nutzen möchte, kann die Beitrittserklärung
-        als Dokument ausfüllen und per E-Mail oder schriftlich beim Vorstand
-        einreichen.
-      </p>
-    </template>
-
-    <h3 class="mt-6 font-bold text-slate-900">
-      3.3 Nutzung des Freibades außerhalb der Öffnungszeiten
-    </h3>
-    <p class="mt-2 leading-relaxed">
-      Für den Zutritt zum Sportbecken des Freibades Offenhausen außerhalb der
-      Öffnungszeiten übermitteln wir Vor- und Nachname, Geburtsdatum,
-      E-Mail-Adresse, Telefonnummer und die Nummer der Saisonkarte an die
-      Marktgemeinde Offenhausen, die die Zutrittsberechtigung verwaltet und
-      freischaltet. Die Marktgemeinde betreibt das Zutrittssystem und verarbeitet
-      die dabei anfallenden Zutrittsprotokolle als eigene datenschutzrechtliche
-      Verantwortliche; dafür gilt deren Datenschutzinformation.
-    </p>
-    <p class="mt-2 leading-relaxed">
-      <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO
-      (Mitgliedschaftsverhältnis).
-    </p>
-
-    <h3 class="mt-6 font-bold text-slate-900">3.4 Kommunikation über WhatsApp</h3>
-    <p class="mt-2 leading-relaxed">
-      Der Verein nutzt WhatsApp (Meta Platforms Ireland Ltd.) als laufenden
-      Kommunikationskanal für Mitglieder. Die Teilnahme ist
-      <strong>freiwillig</strong>: Wer nicht in der Gruppe sein möchte, erhält
-      alle wichtigen Informationen auf Wunsch per E-Mail.
-    </p>
-    <p class="mt-2 leading-relaxed">
-      Bei der Nutzung von WhatsApp verarbeitet Meta Daten nach den eigenen
-      Datenschutzbestimmungen, auf die der Verein keinen Einfluss hat. Details
-      stehen in der
-      <a
-        href="https://www.whatsapp.com/legal/privacy-policy"
-        target="_blank"
-        rel="noopener"
-        class="text-blau-700 hover:underline"
-        >Datenschutzrichtlinie von WhatsApp</a
-      >.
-    </p>
-    <p class="mt-2 leading-relaxed">
-      <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. a DSGVO
-      (Einwilligung durch die freiwillige Nutzung des Messengers).
-    </p>
-
-    <h3 class="mt-6 font-bold text-slate-900">3.5 Server-Logdaten</h3>
-    <p class="mt-2 leading-relaxed">
-      Beim Aufruf dieser Website speichert der Hosting-Anbieter automatisch
-      technische Verbindungsdaten (IP-Adresse, Zeitpunkt, aufgerufene Seite,
-      Browsertyp) in Server-Logfiles. Diese Daten sind für den Verein nicht
-      auswertbar zugänglich, werden nicht mit anderen Datenquellen verknüpft und
-      nach der üblichen Frist des Anbieters gelöscht.
-    </p>
-    <p class="mt-2 leading-relaxed">
-      <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO (berechtigtes
-      Interesse an einem sicheren und störungsfreien Betrieb der Website).
-    </p>
-
-    <h3 class="mt-6 font-bold text-slate-900">3.6 Foto- und Videoaufnahmen</h3>
+    <h2 class="mt-10 text-xl font-extrabold text-blau-900">
+      5. Foto- und Videoaufnahmen
+    </h2>
     <p class="mt-2 leading-relaxed">
       Bei Vereinsveranstaltungen entstehen Foto- und Videoaufnahmen, die wir für
-      die Öffentlichkeitsarbeit des Vereins verwenden – auf dieser Website, in
-      unseren Social-Media-Kanälen, in Presseberichten und in der Vereinschronik.
+      die Öffentlichkeitsarbeit verwenden – auf dieser Website, in unseren
+      Social-Media-Kanälen, in Presseberichten und in der Vereinschronik. Bei
+      Veröffentlichungen in sozialen Medien lässt sich eine Verarbeitung durch
+      die Plattformbetreiber außerhalb der EU bzw. des EWR nicht ausschließen.
     </p>
     <p class="mt-2 leading-relaxed">
       Aufnahmen, auf denen einzelne Personen erkennbar im Vordergrund stehen,
-      veröffentlichen wir nur mit gesonderter Einwilligung. Diese Einwilligung
-      ist freiwillig, für die Mitgliedschaft nicht erforderlich und kann
-      jederzeit mit Wirkung für die Zukunft widerrufen werden – eine kurze
-      E-Mail an
+      veröffentlichen wir nur mit gesonderter Einwilligung. Sie ist freiwillig
+      und kann jederzeit mit Wirkung für die Zukunft widerrufen werden – eine
+      kurze E-Mail an
       <a :href="`mailto:${contact.email}`" class="text-blau-700 hover:underline">{{
         contact.email
       }}</a>
-      genügt. Bereits erschienene Druckwerke bleiben unberührt,
-      Online-Veröffentlichungen entfernen wir nach Möglichkeit.
+      genügt. Online-Veröffentlichungen entfernen wir dann nach Möglichkeit,
+      bereits erschienene Druckwerke bleiben unberührt. Aufnahmen mit
+      dokumentarischem Wert bewahren wir in der Vereinschronik dauerhaft auf.
     </p>
     <p class="mt-2 leading-relaxed">
       <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO (berechtigtes
-      Interesse an der Öffentlichkeitsarbeit) bzw. Art. 6 Abs. 1 lit. a DSGVO
-      (Einwilligung bei Einzelabbildungen).
-    </p>
-
-    <h2 class="mt-10 text-xl font-extrabold text-blau-900">
-      4. Cookies und Tracking
-    </h2>
-    <p class="mt-2 leading-relaxed">
-      Diese Website setzt <strong>keine Cookies</strong> und verwendet keine
-      Tracking- oder Analysedienste. Ein Cookie-Banner ist daher nicht
-      erforderlich. Es werden auch keine Schriften, Karten, Videos oder
-      sonstigen Inhalte von Drittanbietern nachgeladen – die Seite verwendet
-      ausschließlich die auf deinem Gerät vorhandenen Systemschriften. Ein Klick
-      auf den Kartenlink der Kontaktseite führt bewusst erst nach deiner
-      Entscheidung zu OpenStreetMap.
-    </p>
-
-    <h2 class="mt-10 text-xl font-extrabold text-blau-900">
-      5. Weitergabe von Daten
-    </h2>
-    <p class="mt-2 leading-relaxed">
-      Personenbezogene Daten geben wir nur weiter, wenn es gesetzlich
-      vorgeschrieben oder erlaubt ist, wenn du ausdrücklich zugestimmt hast oder
-      wenn es zur Erfüllung des Vereinszwecks notwendig ist – etwa an die
-      Marktgemeinde Offenhausen für die Freibad-Zutrittsverwaltung (siehe 3.3)
-      oder an Veranstalter, wenn du über den Verein bei einem Bewerb genannt
-      wirst.
-    </p>
-    <p class="mt-2 leading-relaxed">Konkret sind das:</p>
-    <ul class="mt-3 space-y-2">
-      <li class="flex items-start gap-3">
-        <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-blau-700" />
-        <span
-          >die <strong>Marktgemeinde Offenhausen</strong> für die
-          Freibad-Zutrittsverwaltung (siehe 3.3)</span
-        >
-      </li>
-      <li class="flex items-start gap-3">
-        <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-blau-700" />
-        <span
-          ><strong>Sport- und Dachverbände sowie Wettkampfveranstalter</strong>
-          bei Nennungen und Ergebnislisten</span
-        >
-      </li>
-      <li class="flex items-start gap-3">
-        <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-blau-700" />
-        <span
-          ><strong>Versicherungen</strong> im Schadensfall bzw. für die
-          Sportversicherung</span
-        >
-      </li>
-      <li class="flex items-start gap-3">
-        <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-blau-700" />
-        <span
-          ><strong>Banken und Zahlungsdienstleister</strong> für den
-          Beitragseinzug</span
-        >
-      </li>
-      <li class="flex items-start gap-3">
-        <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-blau-700" />
-        <span
-          >der <strong>Betreiber des Messenger-Dienstes WhatsApp</strong> bei
-          freiwilliger Teilnahme an der Vereinsgruppe (siehe 3.4)</span
-        >
-      </li>
-      <li class="flex items-start gap-3">
-        <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-blau-700" />
-        <span><strong>Behörden</strong>, soweit gesetzlich vorgeschrieben</span>
-      </li>
-    </ul>
-    <p class="mt-3 leading-relaxed">
-      Eine Weitergabe zu Werbezwecken erfolgt nicht. Der Verein übermittelt
-      personenbezogene Daten nicht aktiv in Drittländer. Bei der Nutzung von
-      Social-Media-Kanälen, des Messenger-Dienstes (3.4) und bei
-      Bildveröffentlichungen (3.6) kann eine Verarbeitung durch die jeweiligen
-      Plattformbetreiber außerhalb der EU bzw. des EWR jedoch nicht
-      ausgeschlossen werden.
+      Interesse an der Öffentlichkeitsarbeit) bzw. lit. a (Einwilligung bei
+      Einzelabbildungen).
     </p>
 
     <h2 class="mt-10 text-xl font-extrabold text-blau-900">6. Deine Rechte</h2>
-    <ul class="mt-3 space-y-2">
-      <li class="flex items-start gap-3">
-        <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-blau-700" />
-        <span
-          ><strong>Auskunft</strong> (Art. 15 DSGVO) über die zu deiner Person
-          verarbeiteten Daten</span
-        >
-      </li>
-      <li class="flex items-start gap-3">
-        <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-blau-700" />
-        <span><strong>Berichtigung</strong> unrichtiger Daten (Art. 16 DSGVO)</span>
-      </li>
-      <li class="flex items-start gap-3">
-        <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-blau-700" />
-        <span><strong>Löschung</strong> (Art. 17 DSGVO)</span>
-      </li>
-      <li class="flex items-start gap-3">
-        <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-blau-700" />
-        <span
-          ><strong>Einschränkung der Verarbeitung</strong> (Art. 18 DSGVO)</span
-        >
-      </li>
-      <li class="flex items-start gap-3">
-        <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-blau-700" />
-        <span><strong>Datenübertragbarkeit</strong> (Art. 20 DSGVO)</span>
-      </li>
-      <li class="flex items-start gap-3">
-        <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-blau-700" />
-        <span
-          ><strong>Widerspruch</strong> gegen Verarbeitungen, die auf einem
-          berechtigten Interesse beruhen (Art. 21 DSGVO)</span
-        >
-      </li>
-      <li class="flex items-start gap-3">
-        <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-blau-700" />
-        <span
-          ><strong>Widerruf</strong> einer erteilten Einwilligung mit Wirkung für
-          die Zukunft</span
-        >
-      </li>
-    </ul>
-    <p class="mt-3 leading-relaxed">
-      Wende dich dafür einfach an
+    <p class="mt-2 leading-relaxed">
+      Du hast das Recht auf Auskunft (Art. 15 DSGVO), Berichtigung (Art. 16),
+      Löschung (Art. 17), Einschränkung der Verarbeitung (Art. 18),
+      Datenübertragbarkeit (Art. 20) und Widerspruch gegen Verarbeitungen auf
+      Grundlage berechtigter Interessen (Art. 21). Eine erteilte Einwilligung
+      kannst du jederzeit mit Wirkung für die Zukunft widerrufen. Wende dich
+      dafür an
       <a :href="`mailto:${contact.email}`" class="text-blau-700 hover:underline">{{
         contact.email
       }}</a
       >.
     </p>
-
-    <h2 class="mt-10 text-xl font-extrabold text-blau-900">
-      7. Beschwerderecht
-    </h2>
     <p class="mt-2 leading-relaxed">
-      Wenn du der Ansicht bist, dass die Verarbeitung deiner Daten gegen die
-      DSGVO verstößt, kannst du dich bei der Aufsichtsbehörde beschweren:
-    </p>
-    <p class="mt-2 leading-relaxed">
-      Österreichische Datenschutzbehörde<br />
-      Barichgasse 40–42, 1030 Wien<br />
-      Telefon: +43 1 52 152-0<br />
-      E-Mail:
+      Wenn du der Ansicht bist, dass die Verarbeitung gegen die DSGVO verstößt,
+      kannst du dich bei der Österreichischen Datenschutzbehörde beschweren:
+      Barichgasse 40–42, 1030 Wien ·
       <a href="mailto:dsb@dsb.gv.at" class="text-blau-700 hover:underline"
         >dsb@dsb.gv.at</a
-      ><br />
+      >
+      ·
       <a
         href="https://www.dsb.gv.at"
         target="_blank"
@@ -351,14 +146,12 @@ const stand = '09.08.2026'
       >
     </p>
 
-    <h2 class="mt-10 text-xl font-extrabold text-blau-900">
-      8. Änderungen dieser Erklärung
-    </h2>
+    <h2 class="mt-10 text-xl font-extrabold text-blau-900">7. Änderungen</h2>
     <p class="mt-2 leading-relaxed">
-      Wir passen diese Datenschutzerklärung an, wenn sich unsere
-      Datenverarbeitung oder die Rechtslage ändert. Es gilt jeweils die hier
-      veröffentlichte Fassung.
+      Wir passen diese Erklärung an, wenn sich die Datenverarbeitung oder die
+      Rechtslage ändert. Es gilt jeweils die hier veröffentlichte Fassung.
     </p>
+
     <p class="mt-6 text-sm text-slate-500">Stand: {{ stand }}</p>
   </section>
 </template>

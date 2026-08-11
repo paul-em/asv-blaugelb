@@ -341,7 +341,7 @@ export const events: {
   Bildern entsteht ein zweispaltiges Raster.
 
   Bewusst nur ein Bild: eine Übersichtsaufnahme von hinten, auf der keine
-  Einzelperson erkennbar im Vordergrund steht (Datenschutzerklärung 3.6).
+  Einzelperson erkennbar im Vordergrund steht (Datenschutzerklärung Punkt 5).
 
   `note` nennt Inhalt und Quelle des Videos und steht hinter dem Link.
 */

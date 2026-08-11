@@ -81,8 +81,10 @@ einzige verlinkte Kanal.
 
 **Beitrittserklärung:** Link zum Microsoft Form in `membershipForm.url`
 eintragen – dann führt `/mitgliedschaft` dorthin (statt zum Download der
-Beitrittserklärung unter `/dokumente`) und die Datenschutzerklärung ergänzt
-automatisch den Absatz zur Verarbeitung durch Microsoft.
+Beitrittserklärung unter `/dokumente`). Achtung: Die Website-Datenschutz&shy;erklärung
+betrifft seit 11.08.2026 nur noch den Besuch der Seite; ein Absatz zur
+Verarbeitung durch Microsoft muss dann eigens ergänzt werden – auf
+`/datenschutz` und in der Datenschutzerklärung des Vereins.
 
 **Freibad-Angebot:** Die Vereinbarung mit der Marktgemeinde ist in Kraft,
 `freibad.aktiv` in `app/data/site.ts` steht auf `true`. Über dieses Flag lässt
