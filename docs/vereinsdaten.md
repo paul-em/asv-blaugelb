@@ -69,7 +69,7 @@ Wiederwahl möglich.
 | --- | --- | --- |
 | Obmann | Martin Muckenhuber | Unterschriftenblock Vereinbarung Gemeinde |
 | Obmann-Stellvertretung | Dieter Reinthaller | Vereinsangabe 10.08.2026 |
-| Schriftführer | Mag. Franz Emathinger, BSc | Vereinbarung Gemeinde |
+| Schriftführer | Franz Emathinger | Vereinbarung Gemeinde; Titel auf Vereinsangabe vom 10.08.2026 weggelassen |
 | Schriftführer-Stellvertretung | Horst Berger | Vereinsangabe 10.08.2026 |
 | Kassier | Dominik Hager | Vereinsangabe 10.08.2026 |
 | Kassier-Stellvertretung | Michael Aschl | Vereinsangabe 10.08.2026 |

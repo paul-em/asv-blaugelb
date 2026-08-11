@@ -331,7 +331,7 @@ export const history = [
 export const board = [
   { role: 'Obmann', name: 'Martin Muckenhuber' },
   { role: 'Obmann-Stellvertretung', name: 'Dieter Reinthaller' },
-  { role: 'Schriftführer', name: 'Mag. Franz Emathinger, BSc' },
+  { role: 'Schriftführer', name: 'Franz Emathinger' },
   { role: 'Schriftführer-Stellvertretung', name: 'Horst Berger' },
   { role: 'Kassier', name: 'Dominik Hager' },
   { role: 'Kassier-Stellvertretung', name: 'Michael Aschl' },
