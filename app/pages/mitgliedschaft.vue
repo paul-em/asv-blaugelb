@@ -208,9 +208,8 @@ const steps = computed(() =>
       Erweiterte Freibadnutzung – wie du dazukommst
     </h2>
     <p class="mt-3 text-slate-600">
-      Für das Schwimmen außerhalb der Öffnungszeiten müssen drei Dinge
-      zusammenkommen. Sind sie erfüllt, schaltet die Marktgemeinde den Zutritt
-      frei:
+      Für das Schwimmen außerhalb der Öffnungszeiten müssen drei Dinge erfüllt
+      sein, damit die Marktgemeinde den Zutritt freischaltet.
     </p>
 
     <div class="mt-6 flex flex-col gap-4 md:flex-row md:items-stretch">
