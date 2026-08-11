@@ -5,6 +5,7 @@ import {
   contact,
   feeNote,
   fees,
+  freibad,
   freibadAccess,
   membership,
   membershipForm,
@@ -230,6 +231,15 @@ const steps = computed(() =>
           </span>
           <p class="mt-3 font-bold text-slate-900">{{ s.title }}</p>
           <p class="mt-2 text-sm leading-relaxed text-slate-600">{{ s.text }}</p>
+          <a
+            v-if="s.link && freibad.url"
+            :href="freibad.url"
+            target="_blank"
+            rel="noopener"
+            class="mt-2 inline-block text-sm font-semibold text-blau-700 underline"
+          >
+            {{ s.link }}
+          </a>
         </div>
       </template>
     </div>

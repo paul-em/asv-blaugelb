@@ -131,7 +131,19 @@ const swimSlots = computed(() =>
               </div>
             </div>
 
-            <p class="mt-4 text-sm text-slate-500">{{ freibad.season }}</p>
+            <p class="mt-4 text-sm text-slate-500">
+              {{ freibad.season }}
+              <template v-if="freibad.url">
+                Öffnungszeiten und die jeweils gültigen Tarife stehen beim
+                <a
+                  :href="freibad.url"
+                  target="_blank"
+                  rel="noopener"
+                  class="font-semibold text-blau-700 underline"
+                  >Freibad Offenhausen</a
+                >.
+              </template>
+            </p>
 
             <div class="mt-8 grid gap-8 md:grid-cols-2">
               <div>

@@ -235,6 +235,9 @@ export const individualSports = {
 */
 export const freibad = {
   aktiv: true,
+  // Seite der Marktgemeinde zum Freibad – dort stehen auch die jeweils
+  // gültigen Tarife (Saisonkarte, Entgelt für die Zutrittsverwaltung).
+  url: 'https://www.offenhausen.at/Freibad_Offenhausen',
   statusNote:
     'Das Schwimmtraining im Freibad ist in Vorbereitung. Die Vereinbarung mit der Marktgemeinde und die dafür nötige Statutenänderung sind noch nicht beschlossen.',
   place: 'Freibad Offenhausen – Sportbecken',
@@ -276,6 +279,7 @@ export const freibadAccess = {
       icon: 'calendar',
       title: 'Saisonkarte & Schlüsselgebühr',
       text: 'Gültige Saisonkarte des Freibades für die laufende Saison, dazu die jährliche Gebühr für die Zutrittsverwaltung an die Marktgemeinde.',
+      link: 'Aktuelle Tarife beim Freibad Offenhausen',
     },
     {
       icon: 'check',

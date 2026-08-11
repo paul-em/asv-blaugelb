@@ -51,9 +51,10 @@ muss. Belegte Daten stehen in [vereinsdaten.md](vereinsdaten.md),
       selbst ist damit nicht belegt.
 - [x] **Vorstand vollständig.** Alle sechs Funktionen sind besetzt
       (Vereinsangabe 10.08.2026), siehe [vereinsdaten.md](vereinsdaten.md).
-- [ ] **Entgelt für die Zutrittsverwaltung.** Die Website nennt es als
-      Voraussetzung, ohne Betrag. Falls die Höhe feststeht: ergänzen oder auf
-      die Freibadtarife der Gemeinde verlinken.
+- [x] **Entgelt für die Zutrittsverwaltung.** Die Website nennt es als
+      Voraussetzung, ohne Betrag – dafür verlinken `/angebot` und das Schaubild
+      auf `/mitgliedschaft` seit 11.08.2026 die Freibadseite der Marktgemeinde
+      (`freibad.url`), wo die jeweils gültigen Tarife stehen.
 - [ ] **Lauftreff.** Für Laufen gibt es derzeit keinen fixen Termin. Falls doch:
       Tag, Uhrzeit, Treffpunkt, Ansprechperson.
 - [ ] **Kommende Veranstaltungen.** Für 2026/2027 ist nichts dokumentiert. Ist
