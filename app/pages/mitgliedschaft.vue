@@ -5,6 +5,7 @@ import {
   contact,
   feeNote,
   fees,
+  freibadAccess,
   membership,
   membershipForm,
   paymentReference,
@@ -200,6 +201,64 @@ const steps = computed(() =>
         <p class="mt-2 text-sm leading-relaxed text-slate-600">{{ b.text }}</p>
       </div>
     </div>
+
+    <!-- Schaubild: Weg zur erweiterten Freibadnutzung -->
+    <h2 class="mt-12 text-2xl font-extrabold text-blau-900">
+      Erweiterte Freibadnutzung – wie du dazukommst
+    </h2>
+    <p class="mt-3 text-slate-600">
+      Für das Schwimmen außerhalb der Öffnungszeiten müssen drei Dinge
+      zusammenkommen. Sind sie erfüllt, schaltet die Marktgemeinde den Zutritt
+      frei:
+    </p>
+
+    <div class="mt-6 flex flex-col gap-4 md:flex-row md:items-stretch">
+      <template v-for="(s, i) in freibadAccess.steps" :key="s.title">
+        <span
+          v-if="i > 0"
+          aria-hidden="true"
+          class="self-center text-2xl font-extrabold text-blau-300"
+          >+</span
+        >
+        <div
+          class="flex-1 rounded-2xl border border-slate-200 bg-white p-5 text-center"
+        >
+          <span
+            class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-blau-50 text-blau-900"
+          >
+            <AppIcon :name="s.icon" class="h-6 w-6" />
+          </span>
+          <p class="mt-3 font-bold text-slate-900">{{ s.title }}</p>
+          <p class="mt-2 text-sm leading-relaxed text-slate-600">{{ s.text }}</p>
+        </div>
+      </template>
+    </div>
+
+    <div class="flex justify-center py-3" aria-hidden="true">
+      <AppIcon name="arrow" class="h-7 w-7 rotate-90 text-gelb-400" />
+    </div>
+
+    <div class="rounded-2xl bg-blau-900 p-6 text-center text-white">
+      <span
+        class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-gelb-400 text-blau-950"
+      >
+        <AppIcon :name="freibadAccess.result.icon" class="h-6 w-6" />
+      </span>
+      <p class="mt-3 text-lg font-bold">{{ freibadAccess.result.title }}</p>
+      <p class="mx-auto mt-2 max-w-xl text-sm leading-relaxed text-blau-100">
+        {{ freibadAccess.result.text }}
+      </p>
+    </div>
+
+    <p class="mt-4 text-sm text-slate-600">
+      Alle Voraussetzungen und Regeln im Detail stehen im
+      <NuxtLink to="/angebot" class="font-semibold text-blau-700 underline"
+        >Angebot</NuxtLink
+      >; die Nutzungsordnung Freibad findest du im Bereich
+      <NuxtLink to="/dokumente" class="font-semibold text-blau-700 underline"
+        >Dokumente</NuxtLink
+      >.
+    </p>
 
     <!-- Arten der Mitgliedschaft -->
     <h2 class="mt-12 text-2xl font-extrabold text-blau-900">

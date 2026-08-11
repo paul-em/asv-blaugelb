@@ -261,6 +261,36 @@ export const freibad = {
 }
 
 /*
+  Schaubild auf /mitgliedschaft: was zusammenkommen muss, damit die
+  Marktgemeinde den erweiterten Freibadzugang freischaltet. Kurzfassung der
+  Voraussetzungen aus `freibad.requirements` – bei Änderungen dort mitziehen.
+*/
+export const freibadAccess = {
+  steps: [
+    {
+      icon: 'group',
+      title: 'Volljähriges Vereinsmitglied',
+      text: 'Ordentliche Mitgliedschaft, Mitgliedsbeitrag entrichtet, mindestens 18 Jahre alt.',
+    },
+    {
+      icon: 'calendar',
+      title: 'Saisonkarte & Schlüsselgebühr',
+      text: 'Gültige Saisonkarte des Freibades für die laufende Saison, dazu die jährliche Gebühr für die Zutrittsverwaltung an die Marktgemeinde.',
+    },
+    {
+      icon: 'check',
+      title: 'Unterschrift Nutzungsordnung',
+      text: 'Nutzungsordnung Freibad samt Selbstverantwortungs- und Belehrungserklärung unterfertigt.',
+    },
+  ],
+  result: {
+    icon: 'phone',
+    title: 'Freischaltung am Smartphone',
+    text: 'Die Marktgemeinde schaltet den Zutritt frei – das Sportbecken lässt sich dann außerhalb der Öffnungszeiten per Mobiltelefon aufsperren.',
+  },
+}
+
+/*
   Schwimmzeiten im Freibad – nur sichtbar, solange `freibad.aktiv` true ist.
 */
 export const trainings = [
