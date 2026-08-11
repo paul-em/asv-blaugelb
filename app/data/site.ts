@@ -73,6 +73,23 @@ export const social = {
   website: 'https://blaugelb.offenhausen.at',
 }
 
+/*
+  Hinweis auf der Startseite zwischen Hero und "Was wir anbieten".
+  `active: false` blendet ihn aus, ohne den Text zu verlieren.
+
+  Der Beitrag im zweiten Absatz muss zu `fees` weiter unten passen – bei einer
+  Beitragsänderung hier mitziehen.
+*/
+export const homeHighlight = {
+  active: true,
+  date: 'August 2026',
+  title: 'Neu ab dieser Saison: Schwimmen außerhalb der Öffnungszeiten',
+  text: [
+    'Gemeinsam mit der Marktgemeinde Offenhausen starten wir in den Probebetrieb – unsere volljährigen Mitglieder können das Sportbecken des Freibades ab sofort früh vor der Öffnung und abends nach dem Badeschluss nutzen.',
+    'Weil die Badesaison heuer schon weit fortgeschritten ist: Wer jetzt beitritt, ist mit dem Mitgliedsbeitrag von 25 € bis Ende 2027 dabei – die nächste volle Saison also inklusive.',
+  ],
+}
+
 export const nav = [
   { label: 'Verein', to: '/verein' },
   { label: 'Angebot', to: '/angebot' },

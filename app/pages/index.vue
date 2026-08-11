@@ -1,5 +1,12 @@
 <script setup lang="ts">
-import { club, seasons, fees, events, history } from '~/data/site'
+import {
+  club,
+  seasons,
+  fees,
+  events,
+  history,
+  homeHighlight,
+} from '~/data/site'
 
 useHead({ title: `${club.name} – ${club.tagline}` })
 
@@ -64,6 +71,41 @@ const einzelbeitrag = computed(
           class="mx-auto flex aspect-square w-64 items-center justify-center rounded-full bg-blau-800/60 md:w-80"
         >
           <LogoMark variant="invers" class="h-40 w-40 md:h-52 md:w-52" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hinweis auf Neuerungen – über homeHighlight.active steuerbar -->
+  <section v-if="homeHighlight.active" class="border-b border-slate-200 bg-gelb-50">
+    <div class="mx-auto max-w-6xl px-4 py-12">
+      <div class="max-w-3xl border-l-4 border-gelb-400 pl-6">
+        <p class="text-xs font-bold uppercase tracking-widest text-blau-700">
+          {{ homeHighlight.date }}
+        </p>
+        <h2 class="mt-2 text-2xl font-extrabold tracking-tight text-blau-900 md:text-3xl">
+          {{ homeHighlight.title }}
+        </h2>
+        <p
+          v-for="t in homeHighlight.text"
+          :key="t"
+          class="mt-4 leading-relaxed text-slate-700"
+        >
+          {{ t }}
+        </p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <NuxtLink
+            to="/mitgliedschaft"
+            class="rounded-xl bg-blau-900 px-5 py-3 font-bold text-white transition hover:bg-blau-800"
+          >
+            Mitglied werden
+          </NuxtLink>
+          <NuxtLink
+            to="/angebot"
+            class="rounded-xl border border-blau-300 px-5 py-3 font-semibold text-blau-900 transition hover:bg-white"
+          >
+            Zeiten und Voraussetzungen
+          </NuxtLink>
         </div>
       </div>
     </div>
