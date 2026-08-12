@@ -66,13 +66,19 @@ muss. Belegte Daten stehen in [vereinsdaten.md](vereinsdaten.md),
 - [x] **Lauftreff.** Für Laufen gibt es derzeit keinen fixen Termin
       (bestätigt 11.08.2026). Die Seite formuliert das entsprechend offen. Falls
       sich das ändert: Tag, Uhrzeit, Treffpunkt, Ansprechperson nachreichen.
-- [ ] **Kommende Veranstaltungen.** Für 2026/2027 ist nichts dokumentiert. Ist
-      eine Neuauflage der Cross Challenge geplant? Termine landen in `events`
-      und erscheinen dann automatisch auf Startseite und `/angebot`.
-- [ ] **Telefonnummer für die Website.** Bekannt ist nur die Mobilnummer von
-      Martin Muckenhuber aus der Ausschreibung 2017 – eine Privatnummer von vor
-      neun Jahren und deshalb nicht auf der Seite.
-- [ ] **Social Media.** Facebook, Instagram, Strava – vorhanden?
+- [x] **Kommende Veranstaltungen.** Derzeit sind keine ausgeschrieben
+      (Vereinsangabe 11.08.2026). `events` bleibt leer, der Terminabschnitt auf
+      Startseite und `/angebot` blendet sich aus. Sobald ein Termin feststeht,
+      dort eintragen – er erscheint dann automatisch.
+- [x] **Telefonnummer für die Website.** Es gibt keine Vereinstelefonnummer
+      (Vereinsangabe 11.08.2026). Die Mobilnummer von Martin Muckenhuber aus
+      der Ausschreibung 2017 ist eine Privatnummer und wird nicht geführt.
+      `contact.phone` bleibt leer, Kontakt läuft über E-Mail und WhatsApp.
+- [x] **Social Media.** Wird derzeit nicht aktiv bespielt (Vereinsangabe
+      11.08.2026). Außer einem alten Facebook-Auftritt gibt es keine
+      Vereinsprofile; er wird bewusst nicht verlinkt, solange er nicht gepflegt
+      wird. Alle Felder in `social` bleiben leer, der Block auf `/kontakt`
+      blendet sich aus.
 
 ## Rechtliches
 

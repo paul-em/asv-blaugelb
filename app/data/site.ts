@@ -56,8 +56,11 @@ export const contact = {
   // Straße, PLZ und Ort zu verwenden.
   mapQuery: 'Bachstätten 4 4625 Pennewang',
   email: 'blaugelb@outlook.com',
-  // TODO: Vereinstelefonnummer. Bekannt ist nur eine Privat-Mobilnummer
-  // aus der Ausschreibung 2017 – bewusst nicht übernommen.
+  // Es gibt keine Vereinstelefonnummer (Vereinsangabe 11.08.2026). Die
+  // Mobilnummer aus der Ausschreibung 2017 ist eine Privatnummer und wird
+  // bewusst nicht geführt. Solange das Feld leer ist, erscheint auf Kontakt-
+  // und Impressumsseite keine Telefonzeile; erreichbar ist der Verein per
+  // E-Mail und WhatsApp.
   phone: '',
   // WhatsApp ist der wichtigste Kanal zu den Mitgliedern. Die Nachrichten
   // landen bei Obmann Martin Muckenhuber (+43 650 2114679), bestätigt am
@@ -77,7 +80,13 @@ export const contact = {
 }
 
 export const social = {
-  // TODO: Links eintragen oder leer lassen (werden dann ausgeblendet)
+  /*
+    Social Media wird derzeit nicht aktiv bespielt (Vereinsangabe 11.08.2026).
+    Außer einem alten Facebook-Auftritt gibt es keine Vereinsprofile; er wird
+    bewusst nicht verlinkt, solange er nicht gepflegt ist. Leere Felder blenden
+    den Social-Block auf /kontakt vollständig aus – wird ein Kanal wieder
+    bespielt, genügt der Link hier.
+  */
   facebook: '',
   instagram: '',
   strava: '',
@@ -335,8 +344,11 @@ export const trainings = [
 
 /*
   Kommende Veranstaltungen.
-  TODO: Seit 2017 ist keine Veranstaltung dokumentiert. Sobald ein Termin
-  feststeht, hier eintragen – Aufbau siehe `history`.
+  Derzeit sind keine ausgeschrieben (Vereinsangabe 11.08.2026); die letzte
+  eigene Veranstaltung liegt 2017. Solange die Liste leer ist, blenden sich der
+  Terminabschnitt auf der Startseite und die Termine unter "Anlassbezogen" auf
+  /angebot aus. Sobald ein Termin feststeht, hier eintragen – Aufbau siehe
+  `history`.
 */
 export const events: {
   name: string
@@ -481,14 +493,16 @@ export const bankAccounts = [
 export const paymentReference = 'Mitgliedsbeitrag + Vor- und Nachname'
 
 /*
-  Beitrittserklärung als Online-Formular (Microsoft Forms).
-  TODO: Link eintragen, sobald das Formular fertig ist.
+  Beitrittserklärung als Online-Formular (Microsoft Forms) – zurückgestellt.
+  Microsoft Forms wird derzeit nicht verwendet, es bleibt beim PDF-Formular
+  (Vereinsangabe 11.08.2026). `url` bleibt deshalb leer, und die Seite verweist
+  auf die Beitrittserklärung zum Download unter /dokumente (Statuten § 5
+  Abs. 1).
 
-  Solange `url` leer ist, verweist die Seite auf die Beitrittserklärung zum
-  Download unter /dokumente (Statuten § 5 Abs. 1). Sobald ein Link hinterlegt
-  ist, erscheinen zusätzlich der
-  Hinweis auf Microsoft als Anbieter und der entsprechende Absatz in der
-  Datenschutzerklärung.
+  Falls das Online-Formular später doch kommt: Vor dem Eintragen des Links den
+  Hinweis auf Microsoft als Anbieter und einen eigenen Absatz zur Verarbeitung
+  durch Microsoft ergänzen – die Website-Datenschutzerklärung betrifft seit
+  11.08.2026 nur noch den Besuch der Seite. Siehe docs/offene-punkte.md.
 */
 export const membershipForm = {
   url: '',
