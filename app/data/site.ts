@@ -383,6 +383,11 @@ export const races = {
     },
     {
       label: 'Rennvideo (2)',
+      note: 'MTB Rennen 2015 von blaugelb Offenhausen',
+      url: 'https://www.youtube.com/watch?v=X3-z_LmHYbU',
+    },
+    {
+      label: 'Rennvideo (3)',
       note: 'Elite/Junioren/Master 2017 von Cyclocross Portal',
       url: 'https://www.youtube.com/watch?v=cTDeTr45DKw',
     },
