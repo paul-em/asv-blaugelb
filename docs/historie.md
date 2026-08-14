@@ -108,6 +108,7 @@ Quelle bestätigen und wurden gestrichen:
 Die Bankverbindung des Vereins (Sparkasse Lambach) stand schon in den
 öffentlichen Ausschreibungs-PDFs von 2017 als Nenngeld-Konto und war ab
 09.08.2026 – auf ausdrückliche Freigabe – als Konto für den
-**Mitgliedsbeitrag** auf der Seite `/mitgliedschaft` angeführt. Seit
-10.08.2026 steht dort auf Vereinsangabe stattdessen das Konto bei der
-**Raiffeisenbank Eberschwang**, siehe [vereinsdaten.md](vereinsdaten.md).
+**Mitgliedsbeitrag** auf der Seite `/mitgliedschaft` angeführt. Am 10.08.2026
+wurde es auf Vereinsangabe durch das Konto bei der **Raiffeisenbank
+Eberschwang** ersetzt; seit 11.08.2026 stehen **beide** Konten auf der Seite,
+siehe [vereinsdaten.md](vereinsdaten.md).

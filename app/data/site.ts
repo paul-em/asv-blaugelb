@@ -482,12 +482,25 @@ export const feeNote =
   BIC ist bewusst nicht angeführt – für Überweisungen innerhalb des SEPA-Raums
   genügt die IBAN.
 
-  Auf Vereinsangabe vom 10.08.2026 wird der Mitgliedsbeitrag über das Konto bei
-  der Raiffeisenbank Eberschwang eingehoben; das Konto bei der Sparkasse Lambach
-  ist deshalb nicht mehr auf der Seite angeführt.
+  Auf Vereinsangabe vom 11.08.2026 stehen beide Vereinskonten auf der Seite –
+  Überweisungen sind auf jedes von beiden möglich.
+
+  `holder` ist der Kontowortlaut, wie ihn die Bank führt. Er lautet bei beiden
+  Konten "ASV blaugelb" und weicht damit bewusst von der Namensführung der
+  Website ab ("blaugelb Offenhausen"): Beim Überweisen muss der Wortlaut zum
+  Konto passen, deshalb steht hier die Bankfassung.
 */
 export const bankAccounts = [
-  { bank: 'Raiffeisenbank Eberschwang', iban: 'AT70 3408 1000 0005 1565' },
+  {
+    bank: 'Raiffeisenbank Eberschwang',
+    holder: 'ASV blaugelb',
+    iban: 'AT70 3408 1000 0005 1565',
+  },
+  {
+    bank: 'Sparkasse Lambach',
+    holder: 'ASV blaugelb',
+    iban: 'AT95 2031 7077 0108 4571',
+  },
 ]
 
 export const paymentReference = 'Mitgliedsbeitrag + Vor- und Nachname'

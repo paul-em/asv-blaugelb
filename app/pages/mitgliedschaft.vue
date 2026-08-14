@@ -165,7 +165,8 @@ const steps = computed(() =>
       Bankverbindung für den Mitgliedsbeitrag
     </h2>
     <p class="mt-3 text-slate-600">
-      Den Mitgliedsbeitrag bitte auf das folgende Vereinskonto überweisen:
+      Den Mitgliedsbeitrag bitte auf eines der folgenden Vereinskonten
+      überweisen:
     </p>
     <div class="mt-6 grid gap-4 sm:grid-cols-2">
       <div
@@ -174,6 +175,9 @@ const steps = computed(() =>
         class="rounded-2xl border border-slate-200 bg-slate-50 p-5"
       >
         <p class="font-bold text-blau-900">{{ k.bank }}</p>
+        <p v-if="k.holder" class="mt-1 text-sm text-slate-600">
+          Kontowortlaut: {{ k.holder }}
+        </p>
         <p class="mt-1 font-mono text-lg tracking-wide text-slate-900">
           {{ k.iban }}
         </p>

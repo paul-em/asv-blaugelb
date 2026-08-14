@@ -128,15 +128,20 @@ erhöhten Beitrag nach Vereinbarung.
 Für Mitgliedsbeiträge, bestätigt in der Projektspezifikation vom 09.08.2026 und
 dort ausdrücklich für die Website freigegeben:
 
-| Bank | IBAN |
-| --- | --- |
-| Raiffeisenbank Eberschwang | AT70 3408 1000 0005 1565 |
+| Bank | Kontowortlaut | IBAN |
+| --- | --- | --- |
+| Raiffeisenbank Eberschwang | ASV blaugelb | AT70 3408 1000 0005 1565 |
+| Sparkasse Lambach | ASV blaugelb | AT95 2031 7077 0108 4571 |
 
-Auf Vereinsangabe vom 10.08.2026 läuft der Mitgliedsbeitrag über das Konto bei
-der **Raiffeisenbank Eberschwang**. Das zuvor angeführte Konto bei der
-**Sparkasse Lambach** (AT95 2031 7077 0108 4571) steht seither nicht mehr auf
-der Website. Die frühere Angabe, das Eberschwang-Konto werde aufgelöst, ist
-damit überholt.
+Auf Vereinsangabe vom 11.08.2026 stehen **beide** Vereinskonten auf
+`/mitgliedschaft`; Überweisungen sind auf jedes von beiden möglich. Zwischen
+10. und 11.08.2026 war vorübergehend nur das Eberschwang-Konto angeführt, davor
+nur das Sparkassen-Konto. Die noch frühere Angabe, das Eberschwang-Konto werde
+aufgelöst, ist überholt.
+
+Der **Kontowortlaut** lautet bei beiden Konten „ASV blaugelb" und weicht damit
+bewusst von der Namensführung der Website ab („blaugelb Offenhausen") – beim
+Überweisen muss der Wortlaut zum Konto passen.
 
 Der BIC wird bewusst weggelassen – innerhalb des SEPA-Raums genügt die IBAN.
 Verwendungszweck laut Website: „Mitgliedsbeitrag + Vor- und Nachname".
